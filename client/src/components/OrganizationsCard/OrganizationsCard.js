@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import linkIcon from "../../assets/icons/external-link-icon.png";
 
 const OrganizationsCard = (props) => {
+  console.log(props);
   if (!props.allOrganizations.donations) {
     return null;
   }
@@ -26,7 +27,7 @@ const OrganizationsCard = (props) => {
             <b>Location:</b> {props.allOrganizations.location}
           </p>
           <p>{props.allOrganizations.description}</p>
-          <p className="">
+          {/* <p className="">
             Donations in need:
             {props.allOrganizations.donations.map((donation) => {
               if (donation.status === "In Need") {
@@ -41,7 +42,7 @@ const OrganizationsCard = (props) => {
                 return <span className="">{donation.itemName}</span>;
               }
             })}
-          </p>
+          </p> */}
           <div className="">
             <Link
               className=""
