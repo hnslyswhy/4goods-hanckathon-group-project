@@ -4,7 +4,6 @@ import linkIcon from "../../assets/icons/external-link-icon.png";
 import "./OrganizationsCard.scss";
 
 const OrganizationsCard = (props) => {
-  console.log(props);
   if (!props.allOrganizations) {
     return null;
   }
@@ -51,7 +50,7 @@ const OrganizationsCard = (props) => {
             <Link
               className="OrganizationsCard__links--learn-more"
               to={{
-                pathname: `organization/${props.allOrganizations.id}`,
+                pathname: `organizations/${props.allOrganizations.accountId}`,
               }}
             >
               Learn More
