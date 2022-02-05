@@ -1,32 +1,36 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import linkIcon from "../../assets/icons/external-link-icon.png";
+import "./OrganizationsCard.scss";
 
 const OrganizationsCard = (props) => {
   console.log(props);
-  if (!props.allOrganizations.donations) {
+  if (!props.allOrganizations) {
     return null;
   }
   return (
     <>
-      <h1>hello</h1>
-      <div className="">
-        <div className="">
+      <div className="OrganizationsCard">
+        <div className="OrganizationsCard__img-container">
           <img
-            className=""
+            className="OrganizationsCard__img-container--img"
             src={props.allOrganizations.image}
             alt={props.allOrganizations.program_name}
           />
         </div>
-        <div className="">
-          <h2>{props.allOrganizations.program_name}</h2>
+        <div className="OrganizationsCard__info">
+          <h2 className="OrganizationsCard__info--title">
+            {props.allOrganizations.program_name}
+          </h2>
           <p>
             <b>Program type:</b> {props.allOrganizations.program_type}
           </p>
           <p>
             <b>Location:</b> {props.allOrganizations.location}
           </p>
-          <p>{props.allOrganizations.description}</p>
+          <p className="OrganizationsCard__info--details">
+            {props.allOrganizations.description}
+          </p>
           {/* <p className="">
             Donations in need:
             {props.allOrganizations.donations.map((donation) => {
@@ -43,9 +47,9 @@ const OrganizationsCard = (props) => {
               }
             })}
           </p> */}
-          <div className="">
+          <div className="OrganizationsCard__links">
             <Link
-              className=""
+              className="OrganizationsCard__links--learn-more"
               to={{
                 pathname: `organization/${props.allOrganizations.id}`,
               }}
@@ -53,12 +57,12 @@ const OrganizationsCard = (props) => {
               Learn More
             </Link>
             <a
-              className=""
+              className="OrganizationsCard__links--website"
               target="_blank"
               href={props.allOrganizations.website}
             >
               Website
-              <img className="" src={linkIcon} />
+              <img className="OrganizationsCard__link-icon" src={linkIcon} />
             </a>
           </div>
         </div>

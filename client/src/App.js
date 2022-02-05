@@ -3,10 +3,11 @@ import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import Header from "./components/Header/Header";
 import HomePage from "./pages/HomePage/HomePage";
 import Footer from "./components/Footer/Footer";
-import OrganizationPage from "./pages/OrganizationPage/OrganizationPage";
+//import OrganizationPage from "./pages/OrganizationPage/OrganizationPage";
 import OrganizationDetailsPage from "./pages/OrganizationDetailsPage/OrganizationDetailsPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
+import Organizations from "./pages/Organizations/Organizations";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Header />
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/organizations" component={OrganizationPage} />
+          <Route path="/organizations" component={Organizations} />
           <Route path="/organization/:id" component={OrganizationDetailsPage} />
           <Route path="/signup" component={SignupPage} />
           <Route path="/login" component={LoginPage} />
