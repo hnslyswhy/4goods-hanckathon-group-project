@@ -7,6 +7,7 @@ import OrganizationPage from './pages/OrganizationPage/OrganizationPage';
 import OrganizationDetailsPage from './pages/OrganizationDetailsPage/OrganizationDetailsPage';
 import SignupPage from './pages/SignupPage/SignupPage';
 import LoginPage from './pages/LoginPage/LoginPage';
+import DonationPage from "./pages/DonationPage/DonationPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path='/organization/:id'  component={OrganizationDetailsPage} />
           <Route path= '/signup' component={SignupPage} />
           <Route path='/login' component ={LoginPage} />
+          <Route path='/donate'  component={DonationPage}/>
 
         </Switch>
         <Footer/>
