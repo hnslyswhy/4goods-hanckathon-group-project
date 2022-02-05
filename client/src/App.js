@@ -20,8 +20,7 @@ function App() {
           <Route path='/organization/:id'  component={OrganizationDetailsPage} />
           <Route path= '/signup' component={SignupPage} />
           <Route path='/login' component ={LoginPage} />
-          <Route path='/donate'  component={DonationPage}/>
-
+          <Route path='/donate/:id'  component={DonationPage}/>
         </Switch>
         <Footer/>
       </BrowserRouter>

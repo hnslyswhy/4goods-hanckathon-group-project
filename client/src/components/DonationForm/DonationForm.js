@@ -73,4 +73,3 @@ const DonationForm = () => {
 
 export default DonationForm;
 
-// name, location, date, description, upload
