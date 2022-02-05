@@ -16,8 +16,11 @@ function App() {
         <Header />
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/organizations" component={OrganizationsPage} />
-          <Route path="/organization/:id" component={OrganizationDetailsPage} />
+          <Route path="/organizations" exact component={OrganizationsPage} />
+          <Route
+            path="/organizations/:id"
+            component={OrganizationDetailsPage}
+          />
           <Route path="/signup" component={SignupPage} />
           <Route path="/login" component={LoginPage} />
         </Switch>
