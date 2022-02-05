@@ -4,10 +4,10 @@ import './DonationForm.scss';
 const DonationForm = () => {
   return (
     <div className='form'>
-      <form className='form'>
+      <h4 className='form__title'>Create donation item</h4>
+      <form className='form__wrapper'>
 
         {/* form title */}
-        <h4 className='form__title'>Create Donation Form</h4>
         <div className='form__thumbnail'></div>
 
         <div className='form__input-wrapper'>
@@ -54,11 +54,17 @@ const DonationForm = () => {
             type='description'
             name='description'
             className='form__item'
+            placeholder='Describe your item'
+            cols='10'
+            rows='4'
             required
            />
          </div>
-
+         <div className='form__button-wrapper'>
+          <button className='form__button'>Upload</button>
+         </div>
         </div>
+
 
       </form>
     </div>
