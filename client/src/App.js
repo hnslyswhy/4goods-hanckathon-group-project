@@ -7,6 +7,7 @@ import OrganizationsPage from "./pages/OrganizationsPage/OrganizationsPage";
 import OrganizationDetailsPage from "./pages/OrganizationDetailsPage/OrganizationDetailsPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
+
 //import Organizations from "./pages/Organizations/Organizations";
 
 function App() {
@@ -18,8 +19,8 @@ function App() {
           <Route path="/" exact component={HomePage} />
           <Route path="/organizations" component={OrganizationsPage} />
           <Route path="/organization/:id" component={OrganizationDetailsPage} />
-          <Route path="/signup" component={SignupPage} />
-          <Route path="/login" component={LoginPage} />
+          <Route path="/signup" exact component={SignupPage} />
+          <Route path="/login" exact component={LoginPage} />
         </Switch>
         <Footer />
       </BrowserRouter>
