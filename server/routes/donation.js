@@ -21,6 +21,28 @@ donationRouter.get("/", async (req, res) => {
   }
 });
 
+//get a donation by Id
+donationRouter.get("/:donationId", async (req, res) => {
+  console.log(req.params.donationId);
+  try {
+    const result = await req.dbClient
+      .db("charity")
+      .collection("donation")
+      .findOne({ _id: ObjectId(req.params.donationId) });
+
+    console.log(result);
+
+    if (result) {
+      res.status(200).json(result);
+    } else {
+      res.status(404).json({ message: "Donation Not Found" });
+    }
+  } catch (e) {
+    res.status(500).json({ message: "Something went wrong" });
+  } finally {
+  }
+});
+
 //post a new donation
 donationRouter.post("/", async (req, res) => {
   try {
