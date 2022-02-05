@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "./OrganizationDetailsPage.scss";
+
 const API_URL = process.env.REACT_APP_API_URL;
 
-class OrganizationDetailPage extends Component {
+class OrganizationDetailsPage extends Component {
   state = {
     targetOrganization: null,
+    donationList: null,
   };
 
   getTargetOrganization = (id) => {
@@ -20,26 +23,48 @@ class OrganizationDetailPage extends Component {
       });
   };
 
+  getDonationCards = (id) => {
+    axios
+      .get(`${API_URL}donation/${id}`)
+      .then((res) => {
+        this.setState({
+          donationList: res.data,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   componentDidMount() {
     this.getTargetOrganization(this.props.match.params.id);
+    this.getDonationCards(this.props.match.params.id);
   }
 
   render() {
-    if (!this.state.targetOrganization) {
+    if (!this.state.targetOrganization && !this.state.donationList) {
       return null;
     }
-    console.log(this.state.targetOrganization);
+
+    console.log(this.props.match.params.id);
     return (
       <div>
-        <div>
-          <h1>{this.state.targetOrganization.program_name}</h1>
-          <img src={this.state.targetOrganization.image} />
-          <p>{this.state.targetOrganization.description}</p>
-          <p>{this.state.targetOrganization.location}</p>
-          <p>{this.state.targetOrganization.website}</p>
+        <div className="OrganizationDetailsPage">
+          <div className="OrganizationDetailsPage__img-container">
+            <img
+              className="OrganizationDetailsPage__img-container--img"
+              src={this.state.targetOrganization.image}
+            />
+          </div>
+          <div className="OrganizationDetailsPage__info">
+            <h1>{this.state.targetOrganization.program_name}</h1>
+            <p>{this.state.targetOrganization.location}</p>
+            <p>{this.state.targetOrganization.website}</p>
+            <p>{this.state.targetOrganization.description}</p>
+          </div>
         </div>
         {/* <div>
-          {this.state.targetOrganization.donations.map((donation) => {
+          {this.state.donationList.map((donation) => {
             return (
               <div>
                 <p>{donation.itemName}</p>
@@ -57,4 +82,4 @@ class OrganizationDetailPage extends Component {
   }
 }
 
-export default OrganizationDetailPage;
+export default OrganizationDetailsPage;
