@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import OrganizationsCard from "../../components/OrganizationsCard/OrganizationsCard";
 import SearchBar from "../../components/SearchBar/SearchBar";
+import "./OrganizationsPage.scss";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
@@ -70,8 +71,8 @@ class OrganizationsPage extends Component {
     console.log(this.state.allOrganizations);
 
     return (
-      <div className="">
-        <h1 className="">Non-Profit Organizations</h1>
+      <div className="OrganizationsPage">
+        <h1 className="OrganizationsPage__title">Non-Profit Organizations</h1>
         <SearchBar
           placeholder="Search for donations, organizations and locations..."
           handleSearch={this.handleSearchServer}
