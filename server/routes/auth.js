@@ -58,7 +58,7 @@ authRouter.post("/signup", async (req, res) => {
       const newAccount = await req.dbClient
         .db("charity")
         .collection("accounts")
-        .insertOne({ accountInfo });
+        .insertOne({ ...accountInfo });
 
       console.log(
         `A document was inserted with the _id: ${newAccount.insertedId}`
@@ -106,7 +106,7 @@ authRouter.post("/login", async (req, res) => {
 
         res.status(200).json({ token });
       } else {
-        res.status(403).json({ message: "Account and Password Not Match" });
+        res.status(204).json({ message: "Account and Password Not Match" });
       }
     } else {
       res.status(404).json({ message: "Account Not Found. Please Sign Up" });

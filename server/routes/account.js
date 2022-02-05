@@ -16,8 +16,8 @@ accountRouter.get("/", async (req, res) => {
         res.status(404).json({ message: "No user Yet" });
       }
     } catch (e) {
-    } finally {
       res.status(500).json({ message: "Something went wrong" });
+    } finally {
     }
   } else {
     try {
@@ -33,8 +33,8 @@ accountRouter.get("/", async (req, res) => {
         res.status(404).json({ message: "No results Found" });
       }
     } catch (e) {
-    } finally {
       res.status(500).json({ message: "Something went wrong" });
+    } finally {
     }
   }
 });
