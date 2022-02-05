@@ -58,7 +58,7 @@ app.use((req, res, next) => {
 
 //routes
 app.use("/account", accountRouter);
-app.use("/", authRouter);
+app.use("/auth", authRouter);
 app.use("/donation", donationRouter);
 
 //port

@@ -27,10 +27,9 @@ authRouter.post("/signup", async (req, res) => {
       res.status(403).json({ message: "Account Already Exist" });
     } else {
       // insert one account
-      const newAccount = await req.dbClient
-        .db("charity")
-        .collection("accounts")
-        .insertOne({
+      let accountInfo = {};
+      if (req.body.type === "organization") {
+        accountInfo = {
           type: req.body.type,
           account: req.body.account, //used to be: username: req.body.username,  // should be the email address
           password: req.body.password,
@@ -42,7 +41,24 @@ authRouter.post("/signup", async (req, res) => {
           image: "https://content.hostgator.com/img/weebly_image_sample.png", // may need change
           description: req.body.description,
           website: req.body.website,
-        });
+        };
+      } else {
+        accountInfo = {
+          type: req.body.type,
+          account: req.body.account, //used to be: username: req.body.username,  // should be the email address
+          password: req.body.password,
+          accountId: uuidv4(),
+          program_name: req.body.program_name, // may need change
+          location: req.body.location,
+          geolocation: req.body.geolocation,
+          image: "https://content.hostgator.com/img/weebly_image_sample.png", // may need change
+          description: req.body.description,
+        };
+      }
+      const newAccount = await req.dbClient
+        .db("charity")
+        .collection("accounts")
+        .insertOne({ accountInfo });
 
       console.log(
         `A document was inserted with the _id: ${newAccount.insertedId}`
@@ -57,7 +73,7 @@ authRouter.post("/signup", async (req, res) => {
       console.log(result);
 
       if (result) {
-        res.status(200).json(result);
+        res.status(200).json({ message: "success" });
       } else {
         res.status(404).json({ message: "Account Not Found" });
       }
