@@ -119,3 +119,31 @@
     background-color: #E5E5E5;
   }
 }
+
+//***************** more content section *************
+.more-content {
+  padding: 48px;
+  background-color: #FDD85D;
+  display: flex;
+  justify-content: space-between;
+
+  &__wrapper {
+    width: 500px;
+    align-self: center;
+  }
+  &__title {
+    padding-bottom: 16px;
+    color:  #6798C0;;
+  }
+
+  &__image {
+    // background: 
+    // url("../../assets/images/hero.png");
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
+    height: 400px;
+    width: 500px;
+    background-color: #E5E5E5;;
+  }
+}

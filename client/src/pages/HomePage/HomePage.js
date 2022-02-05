@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const HomePage = () => {
   return (
     <main className="main">
+      {/* hero section */}
       <section className="hero">
         <div className="hero__image"></div>
         <Link to='/organizations'>
@@ -13,6 +14,7 @@ const HomePage = () => {
         </Link>
       </section>
 
+      {/* about section */}
       <section className="about"> 
         <h2 className="about__title">about</h2>
         <div className="about__wrapper">
@@ -24,6 +26,7 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* explore section */}
       <section className="explore">
        <div className="explore__wrapper">
          <h3 className="explore__title">Explore Organizations</h3>
@@ -32,6 +35,7 @@ const HomePage = () => {
        <div className="explore__image"></div>
       </section>
 
+      {/* donate section */}
       <section className="donate"> 
         <div className="donate__wrapper">
          <div className="donate__image"></div>
@@ -42,6 +46,14 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* more content */}
+      <section className="more-content">
+       <div className="more-content__wrapper">
+         <h3 className="more-content__title">Something Else</h3>
+         <p className="more-content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis voluptatum repudiandae nulla molestiae numquam sapiente, tempore quidem nostrum, illum fugit, harum impedit cupiditate quod excepturi delectus voluptates mollitia iste atque praesentium accusantium minus aperiam iure. Labore ipsum quam repudiandae dolor, repellat qui incidunt veritatis, eius nihil illo voluptas dolores animi.</p>
+       </div>
+       <div className="more-content__image"></div>
+      </section>
     </main>
   );
 };
