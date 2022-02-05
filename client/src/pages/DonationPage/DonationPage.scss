@@ -1,0 +1,27 @@
+@use '../../styles/partials/globals';
+
+.donation {
+  padding: 48px;
+
+  &__subtitle {
+   padding-bottom: 8px;
+   color: #6798C0;
+  }
+  &__wrapper {
+    display: flex;
+    gap: 40px;
+  }
+  &__wrapper2 {
+    width: 500px;
+    align-self: center;
+  }
+  &__image {  
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    // width:00px;
+    background-color: #E5E5E5;
+  }
+  
+}

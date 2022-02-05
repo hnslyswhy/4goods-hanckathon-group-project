@@ -24,25 +24,22 @@ class DonationPage extends Component {
   }
 
   render(){
-    console.log(this.props)
+   
     if(!this.state.organization){
-      console.log(this.state.organization)
       return null  
     }
-    const {description, location, program_name} = this.state.organization
-
-    console.log('descr',description)
+    const {description, location, program_name, image} = this.state.organization;
     
     return (
       <>
       {this.state.organization && 
-       <section className="donate"> 
-        <div className="donate__wrapper">
-         <div className="donate__image"></div>
-          <div className="donate__wrapper2">
-            <h3 className="donate__subtitle">Name: {program_name}</h3>
-            <h3 className="donate__subtitle">Location: {location}</h3>
-            <p className='donate__text' >{description}</p>
+       <section className="donation"> 
+        <div className="donation__wrapper">
+         <img className="donation__image" src={image} alt={program_name}/>
+          <div className="donation__wrapper2">
+            <h4 className="donation__subtitle">Name: {program_name}</h4>
+            <h4 className="donation__subtitle">Location: {location}</h4>
+            <p className='donation__text' >{description}</p>
           </div>
         </div>
       </section>
