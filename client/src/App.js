@@ -5,6 +5,8 @@ import HomePage from "./pages/HomePage/HomePage";
 import Footer from "./components/Footer/Footer";
 import OrganizationPage from './pages/OrganizationPage/OrganizationPage';
 import OrganizationDetailsPage from './pages/OrganizationDetailsPage/OrganizationDetailsPage';
+import SignupPage from './pages/SignupPage/SignupPage';
+import LoginPage from './pages/LoginPage/LoginPage';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Route path='/' exact component={HomePage} />
           <Route path='/organizations' componet={OrganizationPage} />
           <Route path='/organization/:id'  component={OrganizationDetailsPage} />
+          <Route path= '/signup' component={SignupPage} />
+          <Route path='/login' component ={LoginPage} />
 
         </Switch>
         <Footer/>
@@ -26,25 +30,4 @@ function App() {
 
 export default App;
 
-{/* <BrowserRouter>
-       <Route path='' exact component={Header}></Route>
-        
-        <Switch>
-          <Route path='/' exact component={HomePage}/>
-          <Route path='/products' exact component={ProductsPage}/>
-          <Route  path='/products/:id' component={ProductDetails}/>
-          <Route path='/cart/:productId?' component ={Cart}/>
-          <Route path='/signin' component ={SignIn}/>
-          <Route path='/signup' component ={SignUp}/>
-          <Route path='/checkout' component ={ShippingPage}/>
-          <Route path='/payment' component ={PaymentPage}/>
-          <Route path='/placeorder' component ={PlaceOrder}/>
-          <Route path='/order/:orderId' component ={DisplayOrderPage}/>
-          <Route path='/profile' component ={ProfilePage}/>
-          <Route path='/orderlist' component ={OrderHistory}/>
-          <Route path='/search/:name' component ={SearchResultPage}/>
-          <Route path='/confirmation/:orderId' component ={ConfirmationPage}/>
-          <Route path='/findstore' component ={FindStorePage}/>         
-        </Switch> 
-      <Footer/>
-      </BrowserRouter>  */}
+
