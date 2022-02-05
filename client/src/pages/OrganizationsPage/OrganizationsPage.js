@@ -5,7 +5,7 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
-class Organizations extends Component {
+class OrganizationsPage extends Component {
   state = {
     allOrganizations: [],
   };
@@ -90,4 +90,4 @@ class Organizations extends Component {
   }
 }
 
-export default Organizations;
+export default OrganizationsPage;
