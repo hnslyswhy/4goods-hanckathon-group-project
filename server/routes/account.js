@@ -22,7 +22,7 @@ accountRouter.get("/", async (req, res) => {
   } else {
     try {
       // how to query search multiple place
-      const filteredResults = await req.client
+      const filteredResults = await req.dbClient
         .db("charity")
         .collection("accounts")
         .find({ location: { $regex: query } })
@@ -50,7 +50,7 @@ accountRouter.get("/:accountId", async (req, res) => {
     if (result) {
       res.status(200).json(result);
     } else {
-      res.status(404).json({ message: "No Donation Yet" });
+      res.status(404).json({ message: "Account Not Found" });
     }
   } catch (e) {
     res.status(500).json({ message: "Something went wrong" });
