@@ -7,8 +7,21 @@ const HomePage = () => {
     <main className="main">
       <section className="hero">
         <div className="hero__image"></div>
-        <p className="hero__text">Learn more</p>
-      
+        <p className="hero__text">Learn more</p>   
+      </section>
+
+      <section className="about"> 
+        <h3 className="about__title">about</h3>
+        <div className="about__wrapper">
+         <div className="about__image"></div>
+          <div className="about__wrapper2">
+            <h4 className="about__subtitle">Who we are</h4>
+            <p className='about__text' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dolorem aspernatur nemo, error est doloremque ab eaque placeat voluptas! Tempore itaque porro assumenda fugiat vitae sapiente ad, laudantium officiis harum perferendis! Maiores maxime inventore molestias. Architecto, vitae eos. At molestiae esse commodi culpa provident quis officiis laudantium magnam quia dolores ipsum accusamus nobis corporis minus ipsam facilis repellat deserunt error quos quaerat eligendi distinctio, vero possimus repudiandae. Ab, ut quasi aut repudiandae eligendi modi. Cum reiciendis nisi repudiandae voluptatibus quasi animi possimus. Illum sit necessitatibus maxime doloremque reprehenderit suscipit perspiciatis placeat quibusdam accusantium, magnam eum minima iure nemo? Repellat quaerat nisi eos consectetur possimus qui, sunt tempora! Distinctio repudiandae debitis nesciunt sint. Provident quod amet asperiores tempora assumenda saepe possimus!</p>
+          </div>
+
+          </div>
+
+
       </section>
 
     </main>

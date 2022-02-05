@@ -25,3 +25,36 @@
     border-radius: 5px;
   }
 }
+
+.about {
+  padding: 48px;
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 24px;
+  }
+  &__subtitle {
+   padding-bottom: 16px;
+  }
+  &__wrapper {
+    display: flex;
+    gap: 40px;
+  }
+  &__wrapper2 {
+    width: 500px;
+    align-self: center;
+  }
+  &__image {
+    // background: 
+    // url("../../assets/images/hero.png");
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
+    height: 500px;
+    width: 600px;
+    background-color: #E5E5E5;
+  }
+
+
+}
