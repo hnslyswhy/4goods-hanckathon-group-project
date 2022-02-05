@@ -5,20 +5,20 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <header className='header'>
-      <Link to='/'>
+      <Link  className='header__link' to='/'>
         <img  className='header__logo' src="#" alt="header-logo" />
       </Link>
       <nav className='header__navlist'>
-        <Link to='/'>
+        <Link  className='header__link' to='/'>
           <p className='header__navlist-item'>Home</p>
         </Link>
-        <Link to='#'>
+        <Link  className='header__link' to='#'>
           <p className='header__navlist-item'>About</p>
         </Link>
-        <Link to='/organizations'>
+        <Link  className='header__link' to='/organizations'>
           <p className='header__navlist-item'>Organizations</p>
         </Link>
-        <Link to='/login'>
+        <Link  className='header__link' to='/login'>
           <p className='header__navlist-item'>Login</p>
         </Link>
       </nav>

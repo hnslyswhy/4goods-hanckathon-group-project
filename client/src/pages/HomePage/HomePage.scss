@@ -1,0 +1,27 @@
+@use '../../styles/partials/globals';
+
+
+.hero {
+  font-size: 14px;
+  position: relative;
+
+  &__image {
+    // background: 
+    // url("../../assets/images/hero.png");
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
+    height: 55vh;
+    background-color: #E5E5E5;
+  }
+
+  &__text {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    color: #6798C0;
+    background-color: #FDD85D;
+    padding: 16px 32px;
+    border-radius: 5px;
+  }
+}
