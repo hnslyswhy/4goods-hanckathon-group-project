@@ -46,7 +46,7 @@ accountRouter.get("/:accountId", async (req, res) => {
       .db("charity")
       .collection("accounts")
       .findOne({ accountId: req.params.accountId });
-    // .toArray();
+
     if (result) {
       res.status(200).json(result);
     } else {

@@ -35,24 +35,30 @@ const LoginPage = () => {
 
   return (
     <main className="loginPage">
-      <div className="loginPage-container">
-        <h1>Please Login</h1>
-        <form onSubmit={handleLogin}>
-          <div className="loginPage-group">
-            <label htmlFor="username">Email:</label>
-            <input type="email" name="account" />
-          </div>
-          <div className="loginPage-group">
-            <label htmlFor="password"> Password:</label>
-            <input type="password" name="password" />
-          </div>
-          <div className="loginPage-button">
-            <button className="loginPage-button__login" type="submit">
-              Login
-            </button>
-          </div>
-        </form>
-      </div>
+      <h1 className="loginPage__heading">Please Login</h1>
+      <form className="login-form" onSubmit={handleLogin}>
+        <div className="login-form__group">
+          <label className="login-form__label" htmlFor="username">
+            Email:
+          </label>
+          <input className="login-form__input" type="email" name="account" />
+        </div>
+        <div className="login-form__group">
+          <label className="login-form__label" htmlFor="password">
+            Password:
+          </label>
+          <input
+            className="login-form__input"
+            type="password"
+            name="password"
+          />
+        </div>
+        <div className="login-form__group">
+          <button className="login-form__button" type="submit">
+            Login
+          </button>
+        </div>
+      </form>
     </main>
   );
 };
