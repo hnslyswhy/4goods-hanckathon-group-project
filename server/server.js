@@ -9,6 +9,7 @@ const donationRouter = require("./routes/donation");
 
 /// mongodb
 const { MongoClient } = require("mongodb");
+const authRouter = require("./routes/auth");
 let client;
 
 async function main() {
@@ -50,16 +51,17 @@ app.use(cors());
 app.use(express.json());
 
 app.use((req, res, next) => {
+  //add mongo client
   req.dbClient = client;
   next();
 });
 
 //routes
 app.use("/account", accountRouter);
-// app.use("/", singupAndLoginRoute);
+app.use("/", authRouter);
 app.use("/donation", donationRouter);
 
 //port
 app.listen(process.env.PORT || 5050, () => {
-  console.log(`🚀 Server2 listening on ${process.env.PORT}`);
+  console.log(`🚀 Server listening on ${process.env.PORT}`);
 });
