@@ -99,7 +99,7 @@ const SignupPage = () => {
             <label className="signup-form__label">User Type</label>
             <select
               name="type"
-              className="signup-form__input"
+              className="signup-form__input signup-form__select"
               onChange={handleUserType}
             >
               <option>Please select</option>
@@ -120,7 +120,10 @@ const SignupPage = () => {
             </div>
             <div className="signup-form__field">
               <label className="signup-form__label">Program Type</label>
-              <select name="program_type" className="signup-form__input">
+              <select
+                name="program_type"
+                className="signup-form__input signup-form__select"
+              >
                 <option>Please select</option>
                 <option>Homeless Shelter</option>
                 <option>Free/Low Cost Food Program</option>
@@ -150,23 +153,6 @@ const SignupPage = () => {
           </div>
         )}
         <div className="signup-form__group">
-          <div className="signup-form__field signup-form__field--description">
-            <label className="signup-form__label">Description</label>
-            <textarea
-              className="signup-form__input signup-form__input--description"
-              type="text"
-              name="description"
-            />
-          </div>
-          <div className="signup-form__field">
-            <label className="signup-form__label">Location</label>
-            <input className="signup-form__input" type="text" name="location" />
-          </div>
-          <button type="button" onClick={handleGetGeolocation}>
-            show current location
-          </button>
-        </div>
-        <div className="signup-form__group">
           <div className="signup-form__field">
             <label className="signup-form__label">E-mail</label>
             <input className="signup-form__input" type="email" name="account" />
@@ -187,6 +173,27 @@ const SignupPage = () => {
               className="signup-form__input"
               type="password"
               name="confrimPassword"
+            />
+          </div>
+        </div>
+        <div className="signup-form__group">
+          <div className="signup-form__field">
+            <label className="signup-form__label">Location</label>
+            <input className="signup-form__input" type="text" name="location" />
+          </div>
+          <button
+            className="signup-form__gps"
+            type="button"
+            onClick={handleGetGeolocation}
+          >
+            show current location
+          </button>
+          <div className="signup-form__field signup-form__field--description">
+            <label className="signup-form__label">Description</label>
+            <textarea
+              className="signup-form__input signup-form__input--description"
+              type="text"
+              name="description"
             />
           </div>
         </div>

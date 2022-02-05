@@ -45,8 +45,8 @@ accountRouter.get("/:accountId", async (req, res) => {
     const result = await req.dbClient
       .db("charity")
       .collection("accounts")
-      .find({ accountId: req.params.accountId })
-      .toArray();
+      .findOne({ accountId: req.params.accountId });
+
     if (result) {
       res.status(200).json(result);
     } else {
