@@ -1,0 +1,149 @@
+@use '../../styles/partials/globals';
+
+// *************** hero section *******************
+.hero {
+  font-size: 14px;
+  position: relative;
+
+  &__image {
+    // background: 
+    // url("../../assets/images/hero.png");
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
+    height: 55vh;
+    background-color: #E5E5E5;
+  }
+
+  &__text {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    color: #6798C0;
+    background-color: #FDD85D;
+    padding: 16px 32px;
+    border-radius: 5px;
+  }
+}
+
+
+// ************* about section **************
+.about {
+  padding: 48px;
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 24px;
+    color: #6798C0;
+  }
+  &__subtitle {
+   padding-bottom: 16px;
+   color: #6798C0;
+  }
+  &__wrapper {
+    display: flex;
+    gap: 40px;
+  }
+  &__wrapper2 {
+    width: 500px;
+    align-self: center;
+  }
+  &__image {
+    // background: 
+    // url("../../assets/images/hero.png");
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
+    height: 400px;
+    width: 500px;
+    background-color: #E5E5E5;
+  }
+
+}
+
+
+//***************** explore section *************
+.explore {
+  padding: 48px;
+  background-color: #FDD85D;
+  display: flex;
+  justify-content: space-between;
+
+  &__wrapper {
+    width: 500px;
+    align-self: center;
+  }
+  &__title {
+    padding-bottom: 16px;
+    color:  #6798C0;;
+  }
+
+  &__image {
+    // background: 
+    // url("../../assets/images/hero.png");
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
+    height: 400px;
+    width: 500px;
+    background-color: #E5E5E5;;
+  }
+}
+
+// *************** donate section *************
+
+.donate {
+  padding: 48px;
+
+  &__subtitle {
+   padding-bottom: 16px;
+   color: #6798C0;
+  }
+  &__wrapper {
+    display: flex;
+    gap: 40px;
+  }
+  &__wrapper2 {
+    width: 500px;
+    align-self: center;
+  }
+  &__image {
+    // background: 
+    // url("../../assets/images/hero.png");
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
+    height: 400px;
+    width: 500px;
+    background-color: #E5E5E5;
+  }
+}
+
+//***************** more content section *************
+.more-content {
+  padding: 48px;
+  background-color: #FDD85D;
+  display: flex;
+  justify-content: space-between;
+
+  &__wrapper {
+    width: 500px;
+    align-self: center;
+  }
+  &__title {
+    padding-bottom: 16px;
+    color:  #6798C0;;
+  }
+
+  &__image {
+    // background: 
+    // url("../../assets/images/hero.png");
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
+    height: 400px;
+    width: 500px;
+    background-color: #E5E5E5;;
+  }
+}
