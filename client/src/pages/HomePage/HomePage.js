@@ -29,19 +29,15 @@ const HomePage = () => {
           <div className="about__wrapper2">
             <h2 className="about__subtitle">Who We Are</h2>
             <p className="about__text">
-              4Goods is a hub bringing our community together. <br />
-              Everyone is rich, having something to give out; Yet Everyone is
-              poor, needing others' help at a certain time. <br />
-              Just by taking a minute to share your surplus through 4Goods, you
-              may help someone on the other side of the phone to go through a
-              hard time; <br />
-              Just by taking a minute to browser through 4Goods, you may find
-              some strength, some love, and some goods needed to march on;{" "}
-              <br />
-              When you open the map, you will see all the goodness, the warmness
-              around you. <br />
-              Join 4Goods. Let's build our community{" "}
-              <span className="about__strong">together</span>.
+            4Goods is a platform that brings different non-profit organizations
+            and donors together. It is a common issue that donations are not
+            efficiently distributed and used. On 4Goods, any non-profit can
+            easily create posts for surplus donations or items that are needed. By
+            sharing surplus donations, non-profits can efficiently share and
+            distribute their resources while limiting or preventing food waste.
+            Donation Hub can also help donors find what to donate and match them
+            with organizations in need. I hope you will enjoy Donation Hub and find
+            it useful. Happy sharing and happy donating! 
             </p>
           </div>
         </div>
@@ -53,8 +49,8 @@ const HomePage = () => {
           <div className="explore__wrapper2">
             <h2 className="explore__title">Explore Organizations</h2>
             <p className="about__text">
-              Support and donate to local organizations including homeless
-              shelters, first nations organizations, free/low cost food programs
+              Support and donate  local organizations including homeless
+              shelters, first nations etc.., support free/low cost food programs
               in Vancouver, Canada.
             </p>
           </div>
@@ -72,8 +68,8 @@ const HomePage = () => {
               4Goods provides a platform for organizations to show what
               resources they need, as well as surplus donations they have
               received. We envision a society in which every one is committed to
-              giving and participating in charitable sector, in a long term and
-              sustainable way. Small Change. BIG Difference.
+              giving and participating in accharitable sector, in a long term and
+              a sustainable way. Small Change. BIG Difference.
             </p>
           </div>
         </div>
@@ -85,11 +81,19 @@ const HomePage = () => {
           <div className="more-content__wrapper2">
             <h2 className="more-content__title">We're In It Together</h2>
             <p className="about__text">
-              "You have to be humble in what we're doing, but you have to be
-              bold...We will get out there and try something. If it doesn't
-              work, we will try something else. And we will keep trying until we
-              find something that works." - Melinda Gates, Co-Chair & Trustee,
-              Bill & Melinda Gates Foundation <br />
+              4Goods is a hub bringing our community together. <br />
+              Everyone is rich, having something to give out; Yet Everyone is
+              poor, needing others' help at a certain time. <br />
+              Just by taking a minute to share your surplus through 4Goods, you
+              may help someone on the other side of the phone to go through a
+              hard time; <br />
+              Just by taking a minute to browser through 4Goods, you may find
+              some strength, some love, and some goods needed to march on;{" "}
+              <br />
+              When you open the map, you will see all the goodness, the warmness
+              around you. <br />
+              Join 4Goods. Let's build our community{" "}
+              <span className="about__strong">together</span>. <br />
               Join us and make an impact!
             </p>
           </div>

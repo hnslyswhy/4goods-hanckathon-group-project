@@ -186,7 +186,7 @@ const SignupPage = () => {
             type="button"
             onClick={handleGetGeolocation}
           >
-            show current location
+            get current location
           </button>
           <div className="signup-form__field signup-form__field--description">
             <label className="signup-form__label">Description</label>
