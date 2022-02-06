@@ -1,6 +1,7 @@
 import React from "react";
 import "./HomePage.scss";
 import { Link } from "react-router-dom";
+import Button from "../../components/Button/Button";
 
 const HomePage = () => {
   return (
@@ -8,10 +9,10 @@ const HomePage = () => {
       {/* hero section */}
       <section className="hero">
         <div className="hero__text">
-          <p>4Goods is a communication app for non-profits and donors.</p>
+          <p>4Goods is a communication app for non-profits and donors</p>
         </div>
         <Link to="/organizations">
-          <p className="hero__button">Learn more</p>
+          <Button>Learn more</Button>
         </Link>
       </section>
 
