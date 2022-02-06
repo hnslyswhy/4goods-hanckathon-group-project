@@ -53,7 +53,7 @@
     align-self: center;
   }
   &__image {
-    @include home-img("../../assets/images/about.png");
+    @include home-img("../../assets/images/about.jpeg");
   }
 
   &__text {
@@ -99,7 +99,7 @@
     align-self: center;
   }
   &__image {
-    @include home-img("../../assets/images/about.png");
+    @include home-img("../../assets/images/donation.png");
   }
 }
 
@@ -120,6 +120,6 @@
   }
 
   &__image {
-    @include home-img("../../assets/images/about.png");
+    @include home-img("../../assets/images/join.jpeg");
   }
 }
