@@ -1,0 +1,9 @@
+@mixin home-img($url) {
+  background: url($url);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  width: 600px;
+  background-color: #e5e5e5;
+}
