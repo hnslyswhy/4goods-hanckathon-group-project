@@ -19,7 +19,7 @@ const HomePage = () => {
       <h2 className="about__title">about</h2>
 
       {/* about section */}
-      <section className="about section">
+      <section className="about section" id="about">
         <div className="about__wrapper">
           <div className="about__image"></div>
           <div className="about__wrapper2">
