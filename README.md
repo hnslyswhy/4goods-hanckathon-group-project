@@ -29,7 +29,7 @@ I worked on designing, making prototype, mostly focused on front-end side of the
 I worked on the backend, connecting backend with database MongoDB, and the signup, login and logout components in the frontend. It's a great learning opportunity for me to learn about how to use JTW for auth and cooperate with my team to get the backend and database setup properly.
 
 [Carol Deweger](https://github.com/CDeweger) : 
-I proposed this project and designed the structure of the project. I worked on collecting data needed for the database, and was in charge of the orgnization page, which requires me to display data, search organization, etc.. Through my research, I also found out that we could use Clouinary to enable the image upload function. It
+I worked on the front-end using React.js, set up the image upload function with Cloudinary, I also did the initial research, collecting data. And I use Sass for stylings. I am passionate about poverty alleviation. I want to use my programming skill to make a positive impact in my community.
 
 ## Installation
 
