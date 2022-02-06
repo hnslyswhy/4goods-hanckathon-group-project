@@ -16,10 +16,10 @@ const HomePage = () => {
         </Link>
       </section>
 
-      <h2 className="about__title">about</h2>
+      <h2 className="about__title" id="about">about</h2>
 
       {/* about section */}
-      <section className="about section" id="about">
+      <section className="about section">
         <div className="about__wrapper">
           <div className="about__image"></div>
           <div className="about__wrapper2">
