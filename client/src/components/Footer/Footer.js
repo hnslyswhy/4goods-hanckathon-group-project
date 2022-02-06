@@ -15,7 +15,7 @@ const Footer = () => {
           <img className='footer__nav-item' src={twitterIcon }alt="twitter" />
           <img className='footer__nav-item' src={linkedInIcon} alt="linkedin" />
         </div>
-        <p className='footer__copyright'> &copy;2022 Proudly created by 4goods </p>
+        <p className='footer__copyright'> &copy;2022 Proudly created by 4Goods </p>
 
       </div>
       <div className='footer__chat'>

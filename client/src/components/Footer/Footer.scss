@@ -23,6 +23,10 @@
     height: 20px;
   }
 
+  &__copyright {
+    text-transform: capitalize;
+  }
+
   &__chat {
     display: flex;
     align-self: center;
