@@ -1,0 +1,19 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/globals" as *;
+
+.button {
+  background-color: $color-yellow;
+  color: #3c566c;
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  text-transform: capitalize;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

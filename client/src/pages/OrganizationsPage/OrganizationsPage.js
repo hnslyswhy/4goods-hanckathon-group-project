@@ -9,26 +9,38 @@ const API_URL = process.env.REACT_APP_API_URL;
 class OrganizationsPage extends Component {
   state = {
     allOrganizations: [],
+    //donationList: [],
   };
 
   getAllOrganizationsList = () => {
     axios
       .get(`http://localhost:8080/account`)
       .then((res) => {
-        console.log(res)
         this.setState({
           allOrganizations: res.data,
-          //allOrganizationsList: res.data,
         });
-        //console.log(res.data);
       })
       .catch((_err) => {
         console.log("error");
       });
   };
 
+  getDonationList = () => {
+    axios
+      .get(`http://localhost:8080/donation`)
+      .then((res) => {
+        this.setState({
+          donationList: res.data,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   componentDidMount() {
     this.getAllOrganizationsList();
+    this.getDonationList();
   }
 
   // componentDidUpdate(prevProps) {
@@ -69,8 +81,6 @@ class OrganizationsPage extends Component {
       return null;
     }
 
-    console.log(this.state.allOrganizations);
-
     return (
       <div className="OrganizationsPage">
         <h1 className="OrganizationsPage__title">Non-Profit Organizations</h1>
@@ -81,13 +91,10 @@ class OrganizationsPage extends Component {
 
         {this.state.allOrganizations.map((organization) => {
           return (
-            
-          
             <OrganizationsCard
               key={organization.id}
               allOrganizations={organization}
             />
-            
           );
         })}
       </div>

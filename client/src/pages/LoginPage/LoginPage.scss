@@ -79,4 +79,15 @@
       border: yellow 1px solid;
     }
   }
+
+  &__link {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+    margin-top: 1rem;
+  }
 }

@@ -58,6 +58,11 @@ const LoginPage = () => {
             Login
           </button>
         </div>
+        <div className="login-form__group">
+          <Link className="login-form__link" to="/signup">
+            No Account? Signup Now
+          </Link>
+        </div>
       </form>
     </main>
   );
