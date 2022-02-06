@@ -6,6 +6,10 @@
   align-items: center;
   padding: 32px 32px 0px 32px;
 
+  &__logo {
+    width: 15rem;
+  }
+
   &__navlist {
     display: flex;
     gap: 25px;
