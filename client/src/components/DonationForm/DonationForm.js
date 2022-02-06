@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import './DonationForm.scss';
 import axios from 'axios';
-// import {v4: uuid} from 'uuid';
 
 class DonationForm extends Component{
   state ={
     selectedFile: null,
+    imageUploaded: null,
+    previewImg: null,
+    chosedImage: false,
     name: '',
     status:'',
     location:'',
@@ -14,19 +16,35 @@ class DonationForm extends Component{
 
   }
 
+  // handling form change
   handleChange = (e) => {
     this.setState({[e.target.name]: e.target.value});
-    console.log(e.target.value)
   }
-  
-  fileSelectedHandler = (event) => {
-    this.setState({selectedFile: event.target.files[0]})
-  }
+
+  fileSelectedHandler = (e) => {
+    this.setState({
+      selectedFile: e.target.files[0],
+      chosedImage: true,
+    });
+  };
+
+  fileUploadHandler = () => {
+    const formData = new FormData();
+    formData.append("file", this.state.selectedFile);
+    formData.append("upload_preset", "wg0wjivl");
+    axios
+      .post("https://api.cloudinary.com/v1_1/dml1rigkl/image/upload", formData)
+      .then((res) => {
+        this.setState({
+          imageUploaded: res.data.secure_url,
+        });
+      });
+  };
   handleOnSubmit = (e) => {
     e.preventDefault()
     axios.post(`http://localhost:8080/donation`, {
-      accountId: this.props.props.match.params.id,
-      image: e.target.selectedFile.value,
+      accountId: this.props.account,
+      image: this.state.imageUploaded,
       itemName: e.target.name.value,
       date: e.target.date.value,
       status: e.target.status.value,
@@ -37,12 +55,11 @@ class DonationForm extends Component{
      
     })
     .catch(err => {
-      console.log(err)
+      return err
     })
   }
 
   render(){
-    console.log(this.props.props)
 
     return (
       <div className='form'>
@@ -50,10 +67,19 @@ class DonationForm extends Component{
         <h4 className='form__title'>Create donation item</h4>
         <form className='form__wrapper' onSubmit={this.handleOnSubmit}>
            
-           {/* changes to file */}
+           {/* form image */}
            <div>
-              <div className='form__thumbnail'></div>
-              <input type='file' name='selectedFile'  value={this.state.selectedFile}onChange={this.handleChange}/>           
+              <div className='form__thumbnail'>{!this.state.imageUploaded ? null : (
+                  // <img src={this.state.currUser.image} />
+                  <div >
+                    <img
+                     className='form__thumbnail'
+                      src={this.state.imageUploaded}
+                    />
+                  </div>
+                )}</div>
+              <input type='file' name='image' id='new-post-image'  onChange={this.fileSelectedHandler}/>           
+              <button type='button' onClick={ this.fileUploadHandler}>Upload</button>
            </div>
           <div className='form__input-wrapper'>
   
@@ -109,12 +135,12 @@ class DonationForm extends Component{
               required
              />
            </div>
+
+           {/* upload button */}
            <div className='form__button-wrapper'>
             <button className='form__button'>Upload</button>
            </div>
-          </div>
-  
-  
+          </div> 
         </form>
       </div>
     );

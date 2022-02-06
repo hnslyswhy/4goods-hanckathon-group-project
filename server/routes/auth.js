@@ -87,6 +87,7 @@ authRouter.post("/signup", async (req, res) => {
 //login
 authRouter.post("/login", async (req, res) => {
   const { account, password } = req.body;
+  console.log(req.body)
 
   try {
     const result = await req.dbClient
@@ -94,11 +95,11 @@ authRouter.post("/login", async (req, res) => {
       .collection("accounts")
       .findOne({ account: account });
 
-    console.log(result);
+    console.log('result',result);
 
     if (result) {
       if (result.password === password) {
-        const token = jwt.sign({ account: user.account }, JWT_SECRET, {
+        const token = jwt.sign({ account: result.account }, JWT_SECRET, {
           expiresIn: "24h",
         });
 
@@ -124,7 +125,7 @@ const authorize = (req, res, next) => {
   }
 
   const authToken = req.headers.authorization.split(" ")[1];
-
+  console.log(authToken)
   jwt.verify(authToken, JWT_SECRET, (err, decoded) => {
     if (err) {
       return res.status(401).json({ message: "not authorized" });
@@ -134,6 +135,7 @@ const authorize = (req, res, next) => {
       return res.status(401).json({ message: "token expired" });
     }
     req.decoded = decoded;
+    console.log(decoded)
     next();
   });
 };
@@ -143,13 +145,14 @@ authRouter.get("/profile", authorize, async (req, res) => {
 });
 
 authRouter.get("/login/:account", async (req, res) => {
+  console.log(req.params)
   try {
     const targetAccount = await req.dbClient
       .db("charity")
       .collection("accounts")
       .findOne({ account: req.params.account });
 
-    console.log(targetAccount);
+    console.log('target',targetAccount);
 
     if (targetAccount) {
       res.status(200).json(targetAccount);

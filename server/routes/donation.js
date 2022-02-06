@@ -23,12 +23,14 @@ donationRouter.get("/", async (req, res) => {
 
 //get all donation belongs to an account
 donationRouter.get("/account/:accountId", async (req, res) => {
+  console.log('hi')
   try {
     const results = await req.dbClient
       .db("charity")
       .collection("donation")
       .find({ accountId: req.params.accountId })
       .toArray();
+      console.log(results)
     if (results.length !== 0) {
       res.status(200).json(results);
     } else {
