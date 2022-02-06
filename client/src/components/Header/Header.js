@@ -14,9 +14,6 @@ const Header = () => {
         <Link className="header__link" to="/">
           <p className="header__navlist-item">Home</p>
         </Link>
-        <HashLink className="header__link" smooth to="/#about">
-          <p className="header__navlist-item">About</p>
-        </HashLink>
         <Link className="header__link" to="/organizations">
           <p className="header__navlist-item">Organizations</p>
         </Link>
