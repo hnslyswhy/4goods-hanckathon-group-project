@@ -13,8 +13,9 @@
   }
 
   &__navlist {
+    width: 100%;
     display: flex;
-    gap: 2rem;
+    justify-content: space-around;
     font-size: 16px;
     line-height: 19px;
     color: #6798c0;

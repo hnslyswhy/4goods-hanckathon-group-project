@@ -19,9 +19,14 @@
   padding-left: 6rem;
 
   &__text {
-    font-size: 2rem;
+    font-size: 3rem;
     color: $color-blue;
     text-transform: capitalize;
+  }
+
+  &__strong {
+    font-size: 4rem;
+    color: rgb(245, 124, 144);
   }
 }
 
@@ -31,11 +36,13 @@
 
 // ************* about section **************
 .about {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   &__title {
     text-align: center;
     text-transform: uppercase;
     color: #6798c0;
-    margin-top: 2rem;
+    margin-top: 4rem;
     font-size: 2rem;
   }
 
@@ -57,12 +64,20 @@
   }
 
   &__text {
-    line-height: 1.5;
+    line-height: 2;
+    font-size: 1rem;
+  }
+
+  &__strong {
+    font-weight: 600;
+    font-size: 1.5rem;
   }
 }
 
 //***************** explore section *************
 .explore {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   background-color: $color-yellow;
   display: flex;
   justify-content: center;
@@ -85,6 +100,8 @@
 // *************** donate section *************
 
 .donate {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   &__subtitle {
     padding-bottom: 16px;
     color: #6798c0;
@@ -105,6 +122,8 @@
 
 //***************** more content section *************
 .more-content {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   background-color: #fdd85d;
   display: flex;
   justify-content: center;

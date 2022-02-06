@@ -9,7 +9,9 @@ const HomePage = () => {
       {/* hero section */}
       <section className="hero">
         <div className="hero__text">
-          <p>4Goods is a communication app for non-profits and donors</p>
+          <p>
+            Fill & Feel the <span className="hero__strong">love</span>.{" "}
+          </p>
         </div>
         <Link to="/organizations">
           <Button>Learn more</Button>
@@ -25,13 +27,19 @@ const HomePage = () => {
           <div className="about__wrapper2">
             <h2 className="about__subtitle">Who We Are</h2>
             <p className="about__text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
-              voluptatum repudiandae nulla molestiae numquam sapiente, tempore
-              quidem nostrum, illum fugit, harum impedit cupiditate quod
-              excepturi delectus voluptates mollitia iste atque praesentium
-              accusantium minus aperiam iure. Labore ipsum quam repudiandae
-              dolor, repellat qui incidunt veritatis, eius nihil illo voluptas
-              dolores animi.
+              4Goods is a hub bringing our community together. <br />
+              Everyone is rich, having something to give out; Yet Everyone is
+              poor, needing others' help at a certain time. <br />
+              Just by taking a minute to share your surplus through 4Goods, you
+              may help someone on the other side of the phone to go through a
+              hard time; <br />
+              Just by taking a minute to browser through 4Goods, you may find
+              some strength, some love, and some goods needed to march on;{" "}
+              <br />
+              When you open the map, you will see all the goodness, the warmness
+              around you. <br />
+              Join 4Goods. Let's build our community{" "}
+              <span className="about__strong">together</span>.
             </p>
           </div>
         </div>
