@@ -55,41 +55,23 @@ class OrganizationsCard extends Component {
           <p className="OrganizationsCard__info--details">
             {this.props.allOrganizations.description}
           </p>
-
           {/* donation tags */}
-
-          <p>
+          <p className="OrganizationsCard__info--status">
             Donations in need:{" "}
             {this.state.donationList.map((donation) => {
               if (donation.status === "In Need") {
-                return <span className="">{donation.itemName}</span>;
+                return <span className="in-need">{donation.itemName}</span>;
               }
             })}
           </p>
-          <p>
-            Donations in need:{" "}
+          <p className="OrganizationsCard__info--status">
+            Surplus donations:{" "}
             {this.state.donationList.map((donation) => {
               if (donation.status === "Surplus") {
-                return <span className="">{donation.itemName}</span>;
+                return <span className="surplus">{donation.itemName}</span>;
               }
             })}
           </p>
-          {/* <p className="">
-            Donations in need:
-            {this.props.allOrganizations.donations.map((donation) => {
-              if (donation.status === "In Need") {
-                return <span className="">{donation.itemName}</span>;
-              }
-            })}
-          </p>
-          <p className="">
-            Surplus donations:
-            {this.props.allOrganizations.donations.map((donation) => {
-              if (donation.status === "Surplus") {
-                return <span className="">{donation.itemName}</span>;
-              }
-            })}
-          </p> */}
 
           <div className="OrganizationsCard__links">
             <Link
