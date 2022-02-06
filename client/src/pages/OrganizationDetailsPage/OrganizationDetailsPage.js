@@ -57,7 +57,9 @@ class OrganizationDetailsPage extends Component {
             />
           </div>
           <div className="OrganizationDetailsPage__info">
-            <h1>{this.state.targetOrganization.program_name}</h1>
+            <h1 className="OrganizationDetailsPage__info--title">
+              {this.state.targetOrganization.program_name}
+            </h1>
             <p>{this.state.targetOrganization.location}</p>
             <p>{this.state.targetOrganization.website}</p>
             <p>{this.state.targetOrganization.description}</p>
