@@ -1,149 +1,125 @@
-@use '../../styles/partials/globals';
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/globals" as *;
 
 // *************** hero section *******************
 .hero {
   font-size: 14px;
   position: relative;
-
-  &__image {
-    // background: 
-    // url("../../assets/images/hero.png");
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-size: cover;
-    height: 55vh;
-    background-color: #E5E5E5;
-  }
+  background: url("../../assets/images/hero.jpeg");
+  background-repeat: no-repeat;
+  background-position: top 35% left 0;
+  background-size: cover;
+  height: 70vh;
+  background-color: #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding-left: 6rem;
 
   &__text {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    color: #6798C0;
-    background-color: #FDD85D;
-    padding: 16px 32px;
-    border-radius: 5px;
+    font-size: 2rem;
+    color: $color-blue;
+    text-transform: capitalize;
   }
 }
 
+.section {
+  padding: 3rem 6rem;
+}
 
 // ************* about section **************
 .about {
-  padding: 48px;
-
   &__title {
     text-align: center;
     text-transform: uppercase;
-    padding-bottom: 24px;
-    color: #6798C0;
+    color: #6798c0;
+    margin-top: 2rem;
+    font-size: 2rem;
   }
+
   &__subtitle {
-   padding-bottom: 16px;
-   color: #6798C0;
+    padding-bottom: 16px;
+    color: #6798c0;
   }
   &__wrapper {
     display: flex;
-    gap: 40px;
+    gap: 3rem;
+    justify-content: center;
   }
   &__wrapper2 {
-    width: 500px;
+    width: 600px;
     align-self: center;
   }
   &__image {
-    // background: 
-    // url("../../assets/images/hero.png");
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-size: cover;
-    height: 400px;
-    width: 500px;
-    background-color: #E5E5E5;
+    @include home-img("../../assets/images/about.png");
   }
 
+  &__text {
+    line-height: 1.5;
+  }
 }
-
 
 //***************** explore section *************
 .explore {
-  padding: 48px;
-  background-color: #FDD85D;
+  background-color: $color-yellow;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 3rem;
 
   &__wrapper {
-    width: 500px;
+    width: 600px;
     align-self: center;
   }
   &__title {
     padding-bottom: 16px;
-    color:  #6798C0;;
+    color: #6798c0;
   }
 
   &__image {
-    // background: 
-    // url("../../assets/images/hero.png");
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-size: cover;
-    height: 400px;
-    width: 500px;
-    background-color: #E5E5E5;;
+    @include home-img("../../assets/images/explore.png");
   }
 }
 
 // *************** donate section *************
 
 .donate {
-  padding: 48px;
-
   &__subtitle {
-   padding-bottom: 16px;
-   color: #6798C0;
+    padding-bottom: 16px;
+    color: #6798c0;
   }
   &__wrapper {
     display: flex;
-    gap: 40px;
+    gap: 3rem;
+    justify-content: center;
   }
   &__wrapper2 {
-    width: 500px;
+    width: 600px;
     align-self: center;
   }
   &__image {
-    // background: 
-    // url("../../assets/images/hero.png");
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-size: cover;
-    height: 400px;
-    width: 500px;
-    background-color: #E5E5E5;
+    @include home-img("../../assets/images/about.png");
   }
 }
 
 //***************** more content section *************
 .more-content {
-  padding: 48px;
-  background-color: #FDD85D;
+  background-color: #fdd85d;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 3rem;
 
   &__wrapper {
-    width: 500px;
+    width: 600px;
     align-self: center;
   }
   &__title {
     padding-bottom: 16px;
-    color:  #6798C0;
+    color: #6798c0;
   }
 
   &__image {
-    // background: 
-    // url("../../assets/images/hero.png");
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-size: cover;
-    height: 400px;
-    width: 500px;
-    background-color: #E5E5E5;
+    @include home-img("../../assets/images/about.png");
   }
 }
