@@ -27,10 +27,8 @@ function Map({ allOrganizations }) {
     setSelected(item);
   };
 
-  console.log(selected);
-
   return (
-    <LoadScript googleMapsApiKey="AIzaSyA9GVAkTixX9NIc67f_Bw8PFCzE-QD86kw">
+    <LoadScript googleMapsApiKey={MAP_API_KEY}>
       <GoogleMap
         id="marker-example"
         mapContainerStyle={mapContainerStyle}
