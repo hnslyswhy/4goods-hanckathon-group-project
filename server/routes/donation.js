@@ -21,6 +21,25 @@ donationRouter.get("/", async (req, res) => {
   }
 });
 
+//get all donation belongs to an account
+donationRouter.get("/account/:accountId", async (req, res) => {
+  try {
+    const results = await req.dbClient
+      .db("charity")
+      .collection("donation")
+      .find({ accountId: req.params.accountId })
+      .toArray();
+    if (results.length !== 0) {
+      res.status(200).json(results);
+    } else {
+      res.status(404).json({ message: "No Donation Yet" });
+    }
+  } catch (e) {
+    res.status(500).json({ message: "Something went wrong" });
+  } finally {
+  }
+});
+
 //get a donation by Id
 donationRouter.get("/:donationId", async (req, res) => {
   console.log(req.params.donationId);
@@ -54,6 +73,7 @@ donationRouter.post("/", async (req, res) => {
         date: Date.now(),
         itemName: req.body.item,
         information: req.body.info,
+        location: req.body.location,
         status: req.body.status,
         image:
           req.body.image === null
@@ -122,8 +142,6 @@ donationRouter.get("/:donationId", async (req, res) => {
   }
 });
 
-
-
 //get all donation belongs to an account
 donationRouter.get("/account/:accountId", async (req, res) => {
   try {
@@ -155,6 +173,7 @@ donationRouter.patch("/:itemId", async (req, res) => {
           $set: {
             itemName: req.body.itemName,
             information: req.body.information,
+            location: req.body.location,
             status: req.body.status,
             date: Date.now(),
             image: req.body.image,
