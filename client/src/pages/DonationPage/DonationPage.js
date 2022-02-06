@@ -62,7 +62,7 @@ class DonationPage extends Component {
 
      }
      <div className='donation__component'>
-       <DonationForm/>
+       <DonationForm props={this.props}/>
 
      </div>
 
