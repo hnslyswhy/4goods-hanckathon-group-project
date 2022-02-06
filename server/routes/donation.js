@@ -21,6 +21,28 @@ donationRouter.get("/", async (req, res) => {
   }
 });
 
+//get a donation by Id
+donationRouter.get("/:donationId", async (req, res) => {
+  console.log(req.params.donationId);
+  try {
+    const result = await req.dbClient
+      .db("charity")
+      .collection("donation")
+      .findOne({ _id: ObjectId(req.params.donationId) });
+
+    console.log(result);
+
+    if (result) {
+      res.status(200).json(result);
+    } else {
+      res.status(404).json({ message: "Donation Not Found" });
+    }
+  } catch (e) {
+    res.status(500).json({ message: "Something went wrong" });
+  } finally {
+  }
+});
+
 //post a new donation
 donationRouter.post("/", async (req, res) => {
   try {
@@ -71,6 +93,49 @@ donationRouter.delete("/:itemId", async (req, res) => {
         .json(`${result.modifiedCount} document(s) was/were deleted.`);
     } else {
       res.status(404).json({ message: "Item Not Found" });
+    }
+  } catch (e) {
+    res.status(500).json({ message: "Something went wrong" });
+  } finally {
+  }
+});
+
+//get a donation by Id
+donationRouter.get("/:donationId", async (req, res) => {
+  console.log(req.params.donationId);
+  try {
+    const result = await req.dbClient
+      .db("charity")
+      .collection("donation")
+      .findOne({ _id: ObjectId(req.params.donationId) });
+
+    console.log(result);
+
+    if (result) {
+      res.status(200).json(result);
+    } else {
+      res.status(404).json({ message: "Donation Not Found" });
+    }
+  } catch (e) {
+    res.status(500).json({ message: "Something went wrong" });
+  } finally {
+  }
+});
+
+
+
+//get all donation belongs to an account
+donationRouter.get("/account/:accountId", async (req, res) => {
+  try {
+    const results = await req.dbClient
+      .db("charity")
+      .collection("donation")
+      .find({ accountId: req.params.accountId })
+      .toArray();
+    if (results.length !== 0) {
+      res.status(200).json(results);
+    } else {
+      res.status(404).json({ message: "No Donation Yet" });
     }
   } catch (e) {
     res.status(500).json({ message: "Something went wrong" });
