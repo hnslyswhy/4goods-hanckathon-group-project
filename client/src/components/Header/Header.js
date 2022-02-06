@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import { HashLink } from "react-router-hash-link";
 
+
+
+
 const Header = () => {
   let token = sessionStorage.getItem("token");
   console.log(typeof token);

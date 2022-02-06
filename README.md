@@ -1,4 +1,4 @@
-# Donation Hub
+# Donation Hub 4Goods
 
 It is a communication app for non-profits and donors. It is a full-stack project.
 Therefore, both the node modules in the server folder and client folder need to be installed before running the app.
