@@ -44,23 +44,6 @@ class OrganizationsPage extends Component {
     this.getDonationList();
   }
 
-  // componentDidUpdate(prevProps) {
-  //   if (!this.props.location.state) return;
-  //   if (this.props.location.state.id === prevProps.location.state.id) return;
-
-  //   axios
-  //     .get(`${API_URL}organizations`)
-  //     .then((res) => {
-  //       this.setState({
-  //         allOrganizations: res.data,
-  //         allOrganizationsList: res.data,
-  //       });
-  //     })
-  //     .catch((_err) => {
-  //       console.log("error");
-  //     });
-  // }
-
   handleSearchServer = (e) => {
     const query = e.target.value.toLowerCase();
     this.props.history.push({ search: `search=${query}` });
@@ -91,7 +74,7 @@ class OrganizationsPage extends Component {
         />
 
         <div className="map">
-          <Map allOrganizations={this.state.allOrganizations}/>
+          <Map allOrganizations={this.state.allOrganizations} />
         </div>
 
         {this.state.allOrganizations.map((organization) => {
