@@ -1,31 +1,27 @@
-@use '../../styles/partials/globals';
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/globals" as *;
 
 // *************** hero section *******************
 .hero {
   font-size: 14px;
   position: relative;
-
-  &__image {
-    // background: 
-    // url("../../assets/images/hero.png");
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-size: cover;
-    height: 55vh;
-    background-color: #E5E5E5;
-  }
+  background: url("../../assets/images/hero.jpeg");
+  background-repeat: no-repeat;
+  background-position: top 35% left 0;
+  background-size: cover;
+  height: 70vh;
+  background-color: #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 3rem;
 
   &__text {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    color: #6798C0;
-    background-color: #FDD85D;
-    padding: 16px 32px;
-    border-radius: 5px;
+    font-size: 1.5rem;
+    color: $color-blue;
   }
 }
-
 
 // ************* about section **************
 .about {
@@ -35,11 +31,11 @@
     text-align: center;
     text-transform: uppercase;
     padding-bottom: 24px;
-    color: #6798C0;
+    color: #6798c0;
   }
   &__subtitle {
-   padding-bottom: 16px;
-   color: #6798C0;
+    padding-bottom: 16px;
+    color: #6798c0;
   }
   &__wrapper {
     display: flex;
@@ -50,23 +46,14 @@
     align-self: center;
   }
   &__image {
-    // background: 
-    // url("../../assets/images/hero.png");
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-size: cover;
-    height: 400px;
-    width: 500px;
-    background-color: #E5E5E5;
+    @include home-img("../../assets/images/about.png");
   }
-
 }
-
 
 //***************** explore section *************
 .explore {
   padding: 48px;
-  background-color: #FDD85D;
+  background-color: $color-yellow;
   display: flex;
   justify-content: space-between;
 
@@ -76,18 +63,11 @@
   }
   &__title {
     padding-bottom: 16px;
-    color:  #6798C0;;
+    color: #6798c0;
   }
 
   &__image {
-    // background: 
-    // url("../../assets/images/hero.png");
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-size: cover;
-    height: 400px;
-    width: 500px;
-    background-color: #E5E5E5;;
+    @include home-img("../../assets/images/explore.png");
   }
 }
 
@@ -97,8 +77,8 @@
   padding: 48px;
 
   &__subtitle {
-   padding-bottom: 16px;
-   color: #6798C0;
+    padding-bottom: 16px;
+    color: #6798c0;
   }
   &__wrapper {
     display: flex;
@@ -109,21 +89,14 @@
     align-self: center;
   }
   &__image {
-    // background: 
-    // url("../../assets/images/hero.png");
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-size: cover;
-    height: 400px;
-    width: 500px;
-    background-color: #E5E5E5;
+    @include home-img("../../assets/images/about.png");
   }
 }
 
 //***************** more content section *************
 .more-content {
   padding: 48px;
-  background-color: #FDD85D;
+  background-color: #fdd85d;
   display: flex;
   justify-content: space-between;
 
@@ -133,17 +106,10 @@
   }
   &__title {
     padding-bottom: 16px;
-    color:  #6798C0;
+    color: #6798c0;
   }
 
   &__image {
-    // background: 
-    // url("../../assets/images/hero.png");
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-size: cover;
-    height: 400px;
-    width: 500px;
-    background-color: #E5E5E5;
+    @include home-img("../../assets/images/about.png");
   }
 }
