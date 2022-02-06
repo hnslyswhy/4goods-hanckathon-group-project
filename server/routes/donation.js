@@ -122,8 +122,6 @@ donationRouter.get("/:donationId", async (req, res) => {
   }
 });
 
-
-
 //get all donation belongs to an account
 donationRouter.get("/account/:accountId", async (req, res) => {
   try {
