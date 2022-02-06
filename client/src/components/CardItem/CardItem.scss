@@ -1,23 +1,45 @@
-@use '../../styles/partials/globals';
+@use "../../styles/partials/globals";
 
 .cardItem {
   padding: 32px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-  width: 300px;
-  height: 300px;
-  &__image{
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  width: 28rem;
+  height: 20rem;
+
+  &__image {
     height: 100px;
     width: 100px;
     padding-bottom: 16px;
   }
-  
+
   &__description {
     clear: left;
-    width: 250px;
-
+    width: 100%;
+    margin: auto;
   }
   &__wrapper1 {
     display: flex;
-    gap: 24px;
+    justify-content: space-around;
+    //gap: 24px;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    &--delete {
+      background-color: #424242;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+    }
+    &--update {
+      background-color: #fdd85d;
+      color: 424242;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+    }
   }
 }

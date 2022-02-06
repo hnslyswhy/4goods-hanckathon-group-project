@@ -1,34 +1,42 @@
-@use '../../styles/partials/globals';
+@use "../../styles/partials/globals";
 
 .donation {
   padding: 48px;
+  width: 80vw;
+  margin: auto;
 
   &__subtitle {
-   padding-bottom: 8px;
-   color: #6798C0;
+    padding-bottom: 8px;
+    color: #6798c0;
   }
   &__wrapper {
     display: flex;
-    gap: 40px;
+    //gap: 40px;
+    justify-content: space-around;
   }
   &__wrapper2 {
     width: 500px;
     align-self: center;
   }
-  &__image {  
+  &__image {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 200px;
-    background-color: #E5E5E5;
+    width: 40%;
+    //height: 200px;
+    border-radius: 10px;
+    background-color: #e5e5e5;
   }
   &__component {
     padding-bottom: 32px;
   }
-  &__card{
+  &__card {
     display: inline-block;
     padding: 24px 56px;
     float: left;
   }
-  
+  &__posts {
+    width: 80vw;
+    margin: auto;
+  }
 }

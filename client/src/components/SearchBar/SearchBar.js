@@ -18,6 +18,4 @@ const SearchBar = ({ placeholder, handleSearch }) => {
   );
 };
 
-// {placeholder}
-
 export default SearchBar;
