@@ -1,4 +1,4 @@
-@use '../../styles/partials/globals';
+@use "../../styles/partials/globals";
 
 .footer {
   font-size: 13px;
@@ -22,17 +22,16 @@
   &__nav-item {
     height: 20px;
   }
-  
+
   &__chat {
     display: flex;
     align-self: center;
     gap: 8px;
-    background: #FDD85D;
+    background: #fdd85d;
     padding: 10px 15px;
-    border: 1px solid #FDD85D;
+    border: 1px solid #fdd85d;
     border-radius: 25px;
     position: absolute;
     right: 48px;
   }
-
 }
