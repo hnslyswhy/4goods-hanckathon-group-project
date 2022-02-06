@@ -13,8 +13,9 @@ class OrganizationsPage extends Component {
 
   getAllOrganizationsList = () => {
     axios
-      .get(`${API_URL}account`)
+      .get(`http://localhost:8080/account`)
       .then((res) => {
+        console.log(res)
         this.setState({
           allOrganizations: res.data,
           //allOrganizationsList: res.data,
@@ -80,10 +81,13 @@ class OrganizationsPage extends Component {
 
         {this.state.allOrganizations.map((organization) => {
           return (
+            
+          
             <OrganizationsCard
               key={organization.id}
               allOrganizations={organization}
             />
+            
           );
         })}
       </div>
