@@ -21,11 +21,11 @@ const HomePage = () => {
       <h2 className="about__title">about</h2>
 
       {/* about section */}
-      <section className="about section">
+      <section className="about section" id="about">
         <div className="about__wrapper">
           <div className="about__image"></div>
           <div className="about__wrapper2">
-            <h2 className="about__subtitle">Who we are</h2>
+            <h2 className="about__subtitle">Who We Are</h2>
             <p className="about__text">
               4Goods is a hub bringing our community together. <br />
               Everyone is rich, having something to give out; Yet Everyone is
@@ -69,7 +69,7 @@ const HomePage = () => {
         <div className="donate__wrapper">
           <div className="donate__image"></div>
           <div className="donate__wrapper2">
-            <h2 className="donate__subtitle">Donate goods</h2>
+            <h2 className="donate__subtitle">Donate Goods</h2>
             <p className="about__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
               dolorem aspernatur nemo, error est doloremque ab eaque placeat
@@ -88,15 +88,14 @@ const HomePage = () => {
       <section className="more-content section">
         <div className="more-content__wrapper">
           <div className="more-content__wrapper2">
-            <h2 className="more-content__title">Something Else</h2>
+            <h2 className="more-content__title">We're In It Together</h2>
             <p className="about__text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
-              voluptatum repudiandae nulla molestiae numquam sapiente, tempore
-              quidem nostrum, illum fugit, harum impedit cupiditate quod
-              excepturi delectus voluptates mollitia iste atque praesentium
-              accusantium minus aperiam iure. Labore ipsum quam repudiandae
-              dolor, repellat qui incidunt veritatis, eius nihil illo voluptas
-              dolores animi.
+              "You have to be humble in what we're doing, but you have to be
+              bold...We will get out there and try something. If it doesn't
+              work, we will try something else. And we will keep trying until we
+              find something that works." - Melinda Gates, Co-Chair & Trustee,
+              Bill & Melinda Gates Foundation <br />
+              Join us and make an impact!
             </p>
           </div>
         </div>
