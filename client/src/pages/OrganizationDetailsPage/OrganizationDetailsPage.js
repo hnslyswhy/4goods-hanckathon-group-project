@@ -6,13 +6,13 @@ const API_URL = process.env.REACT_APP_API_URL;
 
 class OrganizationDetailsPage extends Component {
   state = {
-    targetOrganization: null,
-    donationList: null,
+    targetOrganization: [],
+    donationList: [],
   };
 
   getTargetOrganization = (id) => {
     axios
-      .get(`${API_URL}account/${id}`)
+      .get(`http://localhost:8080/account/${id}`)
       .then((res) => {
         this.setState({
           targetOrganization: res.data,
@@ -25,7 +25,7 @@ class OrganizationDetailsPage extends Component {
 
   getDonationCards = (id) => {
     axios
-      .get(`${API_URL}donation/${id}`)
+      .get(`http://localhost:8080/donation/account/${id}`)
       .then((res) => {
         this.setState({
           donationList: res.data,
@@ -45,8 +45,8 @@ class OrganizationDetailsPage extends Component {
     if (!this.state.targetOrganization && !this.state.donationList) {
       return null;
     }
+    console.log(this.state.donationList);
 
-    console.log(this.props.match.params.id);
     return (
       <div>
         <div className="OrganizationDetailsPage">
@@ -65,20 +65,39 @@ class OrganizationDetailsPage extends Component {
             <p>{this.state.targetOrganization.description}</p>
           </div>
         </div>
-        {/* <div>
+        <div className="OrganizationDetailsPage__card-group">
           {this.state.donationList.map((donation) => {
             return (
-              <div>
-                <p>{donation.itemName}</p>
-                <p>{donation.information}</p>
-                <p>{donation.status}</p>
-                <div>
-                  <img src={donation.image} />
+              <div className="OrganizationDetailsPage__donation-card">
+                <div className="OrganizationDetailsPage__donation-card--img-container">
+                  <img
+                    className="OrganizationDetailsPage__donation-card--img"
+                    src={donation.image}
+                  />
+                </div>
+                <div className="OrganizationDetailsPage__donation-card--info">
+                  <div className="OrganizationDetailsPage__donation-card--item-date">
+                    <p className="OrganizationDetailsPage__donation-card--item-name">
+                      {donation.itemName}
+                    </p>
+                    <p className="OrganizationDetailsPage__donation-card--date">
+                      Posted:{new Date(donation.date).toLocaleDateString()}
+                    </p>
+                  </div>
+                  <p className="OrganizationDetailsPage__donation-card--status">
+                    Status:
+                    {donation.status === "In Need" ? (
+                      <span className="in-need">In Need</span>
+                    ) : (
+                      <span className="surplus">Surplus</span>
+                    )}
+                  </p>
+                  <p>{donation.information}</p>
                 </div>
               </div>
             );
           })}
-        </div> */}
+        </div>
       </div>
     );
   }
