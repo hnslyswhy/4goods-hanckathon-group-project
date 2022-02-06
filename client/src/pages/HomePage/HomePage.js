@@ -18,10 +18,12 @@ const HomePage = () => {
         </Link>
       </section>
 
-      <h2 className="about__title">about</h2>
+      <h2 className="about__title" id="about">
+        about
+      </h2>
 
       {/* about section */}
-      <section className="about section" id="about">
+      <section className="about section">
         <div className="about__wrapper">
           <div className="about__image"></div>
           <div className="about__wrapper2">
@@ -51,13 +53,9 @@ const HomePage = () => {
           <div className="explore__wrapper2">
             <h2 className="explore__title">Explore Organizations</h2>
             <p className="about__text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
-              voluptatum repudiandae nulla molestiae numquam sapiente, tempore
-              quidem nostrum, illum fugit, harum impedit cupiditate quod
-              excepturi delectus voluptates mollitia iste atque praesentium
-              accusantium minus aperiam iure. Labore ipsum quam repudiandae
-              dolor, repellat qui incidunt veritatis, eius nihil illo voluptas
-              dolores animi.
+              Support and donate to local organizations including homeless
+              shelters, first nations organizations, free/low cost food programs
+              in Vancouver, Canada.
             </p>
           </div>
         </div>
@@ -71,14 +69,11 @@ const HomePage = () => {
           <div className="donate__wrapper2">
             <h2 className="donate__subtitle">Donate Goods</h2>
             <p className="about__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-              dolorem aspernatur nemo, error est doloremque ab eaque placeat
-              voluptas! Tempore itaque porro assumenda fugiat vitae sapiente ad,
-              laudantium officiis harum perferendis! Maiores maxime inventore
-              molestias. Architecto, vitae eos. At molestiae esse commodi culpa
-              provident quis officiis laudantium magnam quia dolores ipsum
-              accusamus nobis corporis minus ipsam facilis repellat deserunt
-              error quos quaerat{" "}
+              4Goods provides a platform for organizations to show what
+              resources they need, as well as surplus donations they have
+              received. We envision a society in which every one is committed to
+              giving and participating in charitable sector, in a long term and
+              sustainable way. Small Change. BIG Difference.
             </p>
           </div>
         </div>
