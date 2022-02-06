@@ -70,7 +70,6 @@ class DonationForm extends Component{
            {/* form image */}
            <div>
               <div className='form__thumbnail'>{!this.state.imageUploaded ? null : (
-                  // <img src={this.state.currUser.image} />
                   <div >
                     <img
                      className='form__thumbnail'
@@ -78,14 +77,17 @@ class DonationForm extends Component{
                     />
                   </div>
                 )}</div>
-              <input type='file' name='image' id='new-post-image'  onChange={this.fileSelectedHandler}/>           
-              <button type='button' onClick={ this.fileUploadHandler}>Upload</button>
+                <div className='form__upload-wrapper'>
+                  <input  type='file' name='image' id='new-post-image'  onChange={this.fileSelectedHandler}/>           
+                  <button className='form__upload' type='button' onClick={ this.fileUploadHandler}>Upload</button>
+                </div>
            </div>
+
           <div className='form__input-wrapper'>
   
           {/* form item name */}
            <div className='form__item-wrapper'>
-           <label className='form__label' htmlFor='item-name'>Name</label>
+           <label className='form__label' htmlFor='item-name'><strong>Name</strong></label>
              <input
               type='text'
               name='name'
@@ -138,7 +140,7 @@ class DonationForm extends Component{
 
            {/* upload button */}
            <div className='form__button-wrapper'>
-            <button className='form__button'>Upload</button>
+            <button className='form__button'>Submit</button>
            </div>
           </div> 
         </form>
