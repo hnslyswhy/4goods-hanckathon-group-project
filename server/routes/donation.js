@@ -73,6 +73,7 @@ donationRouter.post("/", async (req, res) => {
         date: Date.now(),
         itemName: req.body.item,
         information: req.body.info,
+        location: req.body.location,
         status: req.body.status,
         image:
           req.body.image === null
@@ -141,8 +142,6 @@ donationRouter.get("/:donationId", async (req, res) => {
   }
 });
 
-
-
 //get all donation belongs to an account
 donationRouter.get("/account/:accountId", async (req, res) => {
   try {
@@ -174,6 +173,7 @@ donationRouter.patch("/:itemId", async (req, res) => {
           $set: {
             itemName: req.body.itemName,
             information: req.body.information,
+            location: req.body.location,
             status: req.body.status,
             date: Date.now(),
             image: req.body.image,
