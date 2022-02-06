@@ -24,7 +24,7 @@ function App() {
           />
           <Route path="/signup" component={SignupPage} />
           <Route path="/login" component={LoginPage} />
-          <Route path="/donate/:id" component={DonationPage} />
+          <Route path="/profile" component={DonationPage} />
         </Switch>
         <Footer />
       </BrowserRouter>
