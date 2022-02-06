@@ -25,8 +25,12 @@ function App() {
           />
           <Route path="/signup" component={SignupPage} />
           <Route path="/login" component={LoginPage} />
+
+          <Route path="/profile" component={DonationPage} />
+
           <Route path="/logout" component={LogoutPage} />
-          <Route path="/donate/:id" component={DonationPage} />
+         
+
         </Switch>
         <Footer />
       </BrowserRouter>

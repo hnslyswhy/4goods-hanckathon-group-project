@@ -20,8 +20,15 @@
     background-position: center;
     background-size: cover;
     height: 200px;
-    // width:00px;
     background-color: #E5E5E5;
+  }
+  &__component {
+    padding-bottom: 32px;
+  }
+  &__card{
+    display: inline-block;
+    padding: 24px 56px;
+    float: left;
   }
   
 }

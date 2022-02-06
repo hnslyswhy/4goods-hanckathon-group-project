@@ -2,7 +2,9 @@ import React from "react";
 import "./Header.scss";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
+
 import { HashLink } from "react-router-hash-link";
+
 
 const Header = () => {
   let token = sessionStorage.getItem("token");
