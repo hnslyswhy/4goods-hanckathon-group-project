@@ -16,13 +16,14 @@ const HomePage = () => {
         </Link>
       </section>
 
+      <h2 className="about__title">about</h2>
+
       {/* about section */}
-      <section className="about">
-        <h2 className="about__title">about</h2>
+      <section className="about section">
         <div className="about__wrapper">
           <div className="about__image"></div>
           <div className="about__wrapper2">
-            <h3 className="about__subtitle">Who we are</h3>
+            <h2 className="about__subtitle">Who we are</h2>
             <p className="about__text">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
               voluptatum repudiandae nulla molestiae numquam sapiente, tempore
@@ -37,28 +38,31 @@ const HomePage = () => {
       </section>
 
       {/* explore section */}
-      <section className="explore">
+      <section className="explore section">
         <div className="explore__wrapper">
-          <h3 className="explore__title">Explore Organizations</h3>
-          <p className="explore__text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
-            voluptatum repudiandae nulla molestiae numquam sapiente, tempore
-            quidem nostrum, illum fugit, harum impedit cupiditate quod excepturi
-            delectus voluptates mollitia iste atque praesentium accusantium
-            minus aperiam iure. Labore ipsum quam repudiandae dolor, repellat
-            qui incidunt veritatis, eius nihil illo voluptas dolores animi.
-          </p>
+          <div className="explore__wrapper2">
+            <h2 className="explore__title">Explore Organizations</h2>
+            <p className="about__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
+              voluptatum repudiandae nulla molestiae numquam sapiente, tempore
+              quidem nostrum, illum fugit, harum impedit cupiditate quod
+              excepturi delectus voluptates mollitia iste atque praesentium
+              accusantium minus aperiam iure. Labore ipsum quam repudiandae
+              dolor, repellat qui incidunt veritatis, eius nihil illo voluptas
+              dolores animi.
+            </p>
+          </div>
         </div>
         <div className="explore__image"></div>
       </section>
 
       {/* donate section */}
-      <section className="donate">
+      <section className="donate section">
         <div className="donate__wrapper">
           <div className="donate__image"></div>
           <div className="donate__wrapper2">
-            <h3 className="donate__subtitle">Donate goods</h3>
-            <p className="donate__text">
+            <h2 className="donate__subtitle">Donate goods</h2>
+            <p className="about__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
               dolorem aspernatur nemo, error est doloremque ab eaque placeat
               voluptas! Tempore itaque porro assumenda fugiat vitae sapiente ad,
@@ -73,17 +77,20 @@ const HomePage = () => {
       </section>
 
       {/* more content */}
-      <section className="more-content">
+      <section className="more-content section">
         <div className="more-content__wrapper">
-          <h3 className="more-content__title">Something Else</h3>
-          <p className="more-content__text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
-            voluptatum repudiandae nulla molestiae numquam sapiente, tempore
-            quidem nostrum, illum fugit, harum impedit cupiditate quod excepturi
-            delectus voluptates mollitia iste atque praesentium accusantium
-            minus aperiam iure. Labore ipsum quam repudiandae dolor, repellat
-            qui incidunt veritatis, eius nihil illo voluptas dolores animi.
-          </p>
+          <div className="more-content__wrapper2">
+            <h2 className="more-content__title">Something Else</h2>
+            <p className="about__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
+              voluptatum repudiandae nulla molestiae numquam sapiente, tempore
+              quidem nostrum, illum fugit, harum impedit cupiditate quod
+              excepturi delectus voluptates mollitia iste atque praesentium
+              accusantium minus aperiam iure. Labore ipsum quam repudiandae
+              dolor, repellat qui incidunt veritatis, eius nihil illo voluptas
+              dolores animi.
+            </p>
+          </div>
         </div>
         <div className="more-content__image"></div>
       </section>

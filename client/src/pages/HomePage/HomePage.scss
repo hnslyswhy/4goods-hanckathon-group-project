@@ -16,7 +16,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  padding-left: 4rem;
+  padding-left: 6rem;
 
   &__text {
     font-size: 2rem;
@@ -25,42 +25,51 @@
   }
 }
 
+.section {
+  padding: 3rem 6rem;
+}
+
 // ************* about section **************
 .about {
-  padding: 48px;
-
   &__title {
     text-align: center;
     text-transform: uppercase;
-    padding-bottom: 24px;
     color: #6798c0;
+    margin-top: 2rem;
+    font-size: 2rem;
   }
+
   &__subtitle {
     padding-bottom: 16px;
     color: #6798c0;
   }
   &__wrapper {
     display: flex;
-    gap: 40px;
+    gap: 3rem;
+    justify-content: center;
   }
   &__wrapper2 {
-    width: 500px;
+    width: 600px;
     align-self: center;
   }
   &__image {
     @include home-img("../../assets/images/about.png");
   }
+
+  &__text {
+    line-height: 1.5;
+  }
 }
 
 //***************** explore section *************
 .explore {
-  padding: 48px;
   background-color: $color-yellow;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 3rem;
 
   &__wrapper {
-    width: 500px;
+    width: 600px;
     align-self: center;
   }
   &__title {
@@ -76,18 +85,17 @@
 // *************** donate section *************
 
 .donate {
-  padding: 48px;
-
   &__subtitle {
     padding-bottom: 16px;
     color: #6798c0;
   }
   &__wrapper {
     display: flex;
-    gap: 40px;
+    gap: 3rem;
+    justify-content: center;
   }
   &__wrapper2 {
-    width: 500px;
+    width: 600px;
     align-self: center;
   }
   &__image {
@@ -97,13 +105,13 @@
 
 //***************** more content section *************
 .more-content {
-  padding: 48px;
   background-color: #fdd85d;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 3rem;
 
   &__wrapper {
-    width: 500px;
+    width: 600px;
     align-self: center;
   }
   &__title {
