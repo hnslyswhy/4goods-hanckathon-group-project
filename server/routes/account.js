@@ -58,6 +58,24 @@ accountRouter.get("/:accountId", async (req, res) => {
   }
 });
 
+//get all donation belongs to an account
+donationRouter.get("/account/:accountId", async (req, res) => {
+  try {
+    const results = await req.dbClient
+      .db("charity")
+      .collection("donation")
+      .find({ accountId: req.params.accountId })
+      .toArray();
+    if (results.length !== 0) {
+      res.status(200).json(results);
+    } else {
+      res.status(404).json({ message: "No Donation Yet" });
+    }
+  } catch (e) {
+    res.status(500).json({ message: "Something went wrong" });
+  } finally {
+  }
+});
 //update an account by id
 accountRouter.patch("/:accountId", async (req, res) => {
   try {
