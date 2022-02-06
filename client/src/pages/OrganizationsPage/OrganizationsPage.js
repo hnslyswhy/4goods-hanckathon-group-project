@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import OrganizationsCard from "../../components/OrganizationsCard/OrganizationsCard";
 import SearchBar from "../../components/SearchBar/SearchBar";
+import Map from "../../components/Map/Map";
 import "./OrganizationsPage.scss";
 
 const API_URL = process.env.REACT_APP_API_URL;
@@ -88,6 +89,10 @@ class OrganizationsPage extends Component {
           placeholder="Search for donations, organizations and locations..."
           handleSearch={this.handleSearchServer}
         />
+
+        <div className="map">
+          <Map allOrganizations={this.state.allOrganizations}/>
+        </div>
 
         {this.state.allOrganizations.map((organization) => {
           return (
