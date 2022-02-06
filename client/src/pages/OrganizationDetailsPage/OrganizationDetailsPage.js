@@ -60,9 +60,25 @@ class OrganizationDetailsPage extends Component {
             <h1 className="OrganizationDetailsPage__info--title">
               {this.state.targetOrganization.program_name}
             </h1>
-            <p>{this.state.targetOrganization.location}</p>
-            <p>{this.state.targetOrganization.website}</p>
-            <p>{this.state.targetOrganization.description}</p>
+
+            <div className="OrganizationDetailsPage__info--location-website">
+              <p className="OrganizationDetailsPage__info--location">
+                {this.state.targetOrganization.location}
+              </p>
+
+              <a
+                className="OrganizationDetailsPage__info--website"
+                href={this.state.targetOrganization.website}
+                target="_blank"
+              >
+                Go to the Website {">"}
+                {/* <img src={linkIcon} className="detailPage__external-link" /> */}
+              </a>
+            </div>
+            {/* <p>{this.state.targetOrganization.website}</p> */}
+            <p className="OrganizationDetailsPage__info--des">
+              {this.state.targetOrganization.description}
+            </p>
           </div>
         </div>
         <div className="OrganizationDetailsPage__card-group">
