@@ -24,19 +24,19 @@ accountRouter.get("/", async (req, res) => {
     }
   } else {
     try {
-      // how to query search multiple place
       const filteredResults = await req.dbClient
         .db("charity")
         .collection("accounts")
-        .find({ $text: { $search: "Object.values(req.query)[0]" } })
+        .find({ $text: { $search: Object.values(req.query)[0] } })
         .toArray();
 
-      if (results.length !== 0) {
-        res.status(200).json(results);
+      if (filteredResults.length !== 0) {
+        res.status(200).json(filteredResults);
       } else {
         res.status(404).json({ message: "No results Found" });
       }
     } catch (e) {
+      console.log(e);
       res.status(500).json({ message: "Something went wrong" });
     } finally {
     }

@@ -71,28 +71,26 @@ donationRouter.post("/", async (req, res) => {
       .insertOne({
         accountId: req.body.accountId,
         date: Date.now(),
-        itemName: req.body.item,
-        information: req.body.info,
-        location: req.body.location,
+        itemName: req.body.itemName,
+        information: req.body.information,
         status: req.body.status,
         image:
-          req.body.image === null
+          req.body.image === undefined
             ? "https://ecowaterqa.vtexassets.com/arquivos/ids/156130-800-auto?width=800&height=auto&aspect=true"
             : req.body.image,
       });
 
     console.log(`A document was inserted with the _id: ${result.insertedId}`);
 
-    // expecting all donations or just new donation ?
-    const allDonation = await req.dbClient
+    const newDonation = await req.dbClient
       .db("charity")
       .collection("donation")
-      .find({})
-      .toArray();
-    if (allDonation.length !== 0) {
-      res.status(200).json(allDonation);
+      .findOne({ _id: ObjectId(result.insertedId) });
+
+    if (newDonation) {
+      res.status(200).json(newDonation);
     } else {
-      res.status(404).json({ message: "No Donation Yet" });
+      res.status(404).json({ message: "Item Not Found" });
     }
   } catch (e) {
     res.status(500).json({ message: "Something went wrong" });

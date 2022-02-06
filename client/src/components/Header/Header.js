@@ -13,9 +13,6 @@ const Header = () => {
         <Link className="header__link" to="/">
           <p className="header__navlist-item">Home</p>
         </Link>
-        <Link className="header__link" to="#">
-          <p className="header__navlist-item">About</p>
-        </Link>
         <Link className="header__link" to="/organizations">
           <p className="header__navlist-item">Organizations</p>
         </Link>
