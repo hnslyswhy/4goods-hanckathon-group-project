@@ -14,7 +14,7 @@ Storage: MongoDB, Cloudinary
 
 ## Demo
 watch the video demo 
-coming soon
+https://www.awesomescreenshot.com/video/7256899?key=9b61ebcd86b295158ca6d262860c2b90
 
 
 ## Team Members
