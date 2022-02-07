@@ -25,22 +25,6 @@ async function main() {
   } finally {
   }
 }
-/* let client;
-console.log(client);
-async function main() {
-  const uri = process.env.MONGODB_URL;
-  const options = {
-    sslValidate: false,
-  };
-  client = new MongoClient(uri, options);
-  console.log("hi");
-  try {
-    await client.connect();
-  } catch (e) {
-    console.error(e);
-  } finally {
-  }
-} */
 
 main().catch(console.error);
 

@@ -22,7 +22,7 @@ class OrganizationsPage extends Component {
         });
       })
       .catch((_err) => {
-        console.log("error");
+        //console.log("error");
       });
   };
 
@@ -35,7 +35,7 @@ class OrganizationsPage extends Component {
         });
       })
       .catch((err) => {
-        console.log(err);
+        //console.log(err);
       });
   };
 
@@ -46,17 +46,19 @@ class OrganizationsPage extends Component {
 
   handleSearchServer = (e) => {
     const query = e.target.value.toLowerCase();
-    this.props.history.push({ search: `search=${query}` });
+    // this.props.history.push({ search: `search=${query}` });
 
     axios
-      .get(`${API_URL}account/?search=${query}`)
+      .get(`http://localhost:8080/account/?search=${query}`)
       .then((res) => {
+        console.log(res.data);
         this.setState({
           allOrganizations: res.data,
         });
+        console.log(this.state.allOrganizations);
       })
       .catch((_err) => {
-        console.log("error");
+        //console.log("error");
       });
   };
 
@@ -64,6 +66,8 @@ class OrganizationsPage extends Component {
     if (!this.state.allOrganizations) {
       return null;
     }
+
+    //console.log(this.props.location);
 
     return (
       <div className="OrganizationsPage">
@@ -80,7 +84,7 @@ class OrganizationsPage extends Component {
         {this.state.allOrganizations.map((organization) => {
           return (
             <OrganizationsCard
-              key={organization.id}
+              key={organization._id}
               allOrganizations={organization}
             />
           );

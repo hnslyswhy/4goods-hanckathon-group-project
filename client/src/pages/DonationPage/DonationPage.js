@@ -23,20 +23,20 @@ class DonationPage extends Component {
         axios
           .get(`http://localhost:8080/auth/login/${this.state.organization}`)
           .then((res) => {
-            console.log(res);
+            //console.log(res);
             this.setState({ accountObj: res.data });
             axios
               .get(
                 `http://localhost:8080/donation/account/${res.data.accountId}`
               )
               .then((res) => {
-                console.log(res.data);
+                //console.log(res.data);
                 this.setState({ donations: res.data });
               });
           });
       })
       .catch((err) => {
-        console.log(err);
+        //console.log(err);
       });
   };
 
@@ -44,7 +44,7 @@ class DonationPage extends Component {
     this.fetchData();
   }
   render() {
-    console.log(this.props);
+    //console.log(this.props);
     if (!this.state.organization) {
       return null;
     }
@@ -87,7 +87,7 @@ class DonationPage extends Component {
         <div className="donation__posts">
           {this.state.donations.map((donation) => {
             return (
-              <span className="donation__card">
+              <span className="donation__card" key={donation._id}>
                 <CardItem
                   image={donation.image}
                   name={donation.itemName}

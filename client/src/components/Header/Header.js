@@ -2,14 +2,10 @@ import React from "react";
 import "./Header.scss";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
-import { HashLink } from "react-router-hash-link";
-
-
-
 
 const Header = () => {
   let token = sessionStorage.getItem("token");
-  console.log(typeof token);
+  //console.log(typeof token);
 
   return (
     <header className="header">
@@ -20,11 +16,11 @@ const Header = () => {
         <Link className="header__link" to="/">
           <p className="header__navlist-item">Home</p>
         </Link>
-        <HashLink className="header__link" smooth to="/#about">
-          <p className="header__navlist-item">About</p>
-        </HashLink>
-        <Link className="header__link" to="/organizations">
-          <p className="header__navlist-item">Organizations</p>
+        <Link className="header__link" to="/donors">
+          <p className="header__navlist-item">Donors</p>
+        </Link>
+        <Link className="header__link" to="/donations">
+          <p className="header__navlist-item">Goods</p>
         </Link>
         {token && (
           <>

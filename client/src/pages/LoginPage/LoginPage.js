@@ -18,7 +18,7 @@ const LoginPage = () => {
     axios
       .post("http://localhost:8080/auth/login", accountInfo)
       .then((response) => {
-        console.log(response);
+        //console.log(response);
         if (response.status === 200) {
           sessionStorage.setItem("token", response.data.token);
           history.push("/profile");

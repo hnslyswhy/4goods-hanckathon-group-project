@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import Header from "./components/Header/Header";
 import HomePage from "./pages/HomePage/HomePage";
 import Footer from "./components/Footer/Footer";
-
+import DonationItemsPage from "./pages/DonationItemsPage/DonationItemsPage";
 import OrganizationsPage from "./pages/OrganizationsPage/OrganizationsPage";
 import OrganizationDetailsPage from "./pages/OrganizationDetailsPage/OrganizationDetailsPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
@@ -18,21 +18,14 @@ function App() {
         <Header />
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/organizations" exact component={OrganizationsPage} />
-          <Route
-            path="/organizations/:id"
-            component={OrganizationDetailsPage}
-          />
+          <Route path="/donors" exact component={OrganizationsPage} />
+          <Route path="/donors/:id" component={OrganizationDetailsPage} />
           <Route path="/signup" component={SignupPage} />
           <Route path="/login" component={LoginPage} />
           <Route path="/logout" component={LogoutPage} />
-         
-
+          <Route path="/donations" component={DonationItemsPage} />
           <Route path="/profile" component={DonationPage} />
-
           <Route path="/logout" component={LogoutPage} />
-         
-
         </Switch>
         <Footer />
       </BrowserRouter>

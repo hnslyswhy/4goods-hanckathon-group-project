@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./OrganizationDetailsPage.scss";
+import edit from "../../assets/icons/edit.svg";
+import deleteIcon from "../../assets/icons/delete.svg";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
@@ -36,6 +38,17 @@ class OrganizationDetailsPage extends Component {
       });
   };
 
+  handleDeleteDonationItem = (id) => {
+    axios
+      .delete(`http://localhost:8080/donation/account/${id}`)
+      .then(() => {
+        this.getDonationCards(this.props.match.params.id);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   componentDidMount() {
     this.getTargetOrganization(this.props.match.params.id);
     this.getDonationCards(this.props.match.params.id);
@@ -45,7 +58,6 @@ class OrganizationDetailsPage extends Component {
     if (!this.state.targetOrganization && !this.state.donationList) {
       return null;
     }
-    console.log(this.state.donationList);
 
     return (
       <div>
@@ -100,14 +112,24 @@ class OrganizationDetailsPage extends Component {
                       Posted:{new Date(donation.date).toLocaleDateString()}
                     </p>
                   </div>
-                  <p className="OrganizationDetailsPage__donation-card--status">
-                    Status:
-                    {donation.status === "In Need" ? (
-                      <span className="in-need">In Need</span>
-                    ) : (
-                      <span className="surplus">Surplus</span>
-                    )}
-                  </p>
+                  <div className="OrganizationDetailsPage__group">
+                    <p className="OrganizationDetailsPage__donation-card--status">
+                      Status:
+                      {donation.status === "In Need" ? (
+                        <span className="in-need">In Need</span>
+                      ) : (
+                        <span className="surplus">Surplus</span>
+                      )}
+                    </p>
+                    <img
+                      className="OrganizationDetailsPage__icon"
+                      src={deleteIcon}
+                      alt="delete"
+                      onClick={() =>
+                        this.handleDeleteDonationItem(donation._id)
+                      }
+                    />
+                  </div>
                   <p>{donation.information}</p>
                 </div>
               </div>

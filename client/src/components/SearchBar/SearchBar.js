@@ -1,17 +1,20 @@
 import React from "react";
 import "./SearchBar.scss";
 
-const SearchBar = ({ placeholder, handleSearch }) => {
+const SearchBar = (props) => {
+  const handleChange = () => {
+    props.handleSearch();
+  };
   return (
     <div className="searchBar">
       <form className="searchBar__form">
         <span className="searchBar-icon"></span>
         <input
           type="text"
-          placeholder={placeholder}
+          placeholder={props.placeholder}
           name="search"
           className="searchBar__input"
-          onChange={handleSearch}
+          onChange={handleChange}
         />
       </form>
     </div>

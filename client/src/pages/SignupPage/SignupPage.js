@@ -4,7 +4,7 @@ import "./SignupPage.scss";
 import axios from "axios";
 
 const baseUrl = process.env.REACT_APP_API_URL;
-console.log(baseUrl);
+//console.log(baseUrl);
 
 const SignupPage = () => {
   const history = useHistory();
@@ -24,8 +24,8 @@ const SignupPage = () => {
 
   const success = (position) => {
     const coordinations = position.coords;
-    console.log(`Latitude : ${coordinations.latitude}`);
-    console.log(`Longitude: ${coordinations.longitude}`);
+    //console.log(`Latitude : ${coordinations.latitude}`);
+    //console.log(`Longitude: ${coordinations.longitude}`);
     setGeoLoc([coordinations.latitude, coordinations.longitude]);
   };
 
@@ -77,12 +77,12 @@ const SignupPage = () => {
       };
     }
 
-    console.log(accountInfo);
+    //console.log(accountInfo);
     // axios.post(`${baseUrl}/auth/signup`, accountInfo);
     axios
       .post("http://localhost:8080/auth/signup", accountInfo)
       .then((response) => {
-        console.log(response);
+        //console.log(response);
         if (response.data.message === "success") {
           history.push("/login");
         }

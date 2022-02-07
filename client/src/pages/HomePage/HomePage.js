@@ -13,7 +13,7 @@ const HomePage = () => {
             Fill & Feel the <span className="hero__strong">love</span>.{" "}
           </p>
         </div>
-        <Link to="/organizations">
+        <Link to="/donors">
           <Button>Learn more</Button>
         </Link>
       </section>
@@ -29,15 +29,16 @@ const HomePage = () => {
           <div className="about__wrapper2">
             <h2 className="about__subtitle">Who We Are</h2>
             <p className="about__text">
-            4Goods is a platform that brings different non-profit organizations
-            and donors together. It is a common issue that donations are not
-            efficiently distributed and used. On 4Goods, any non-profit can
-            easily create posts for surplus donations or items that are needed. By
-            sharing surplus donations, non-profits can efficiently share and
-            distribute their resources while limiting or preventing food waste.
-            Donation Hub can also help donors find what to donate and match them
-            with organizations in need. I hope you will enjoy Donation Hub and find
-            it useful. Happy sharing and happy donating! 
+              4Goods is a platform that brings different non-profit
+              organizations and donors together. It is a common issue that
+              donations are not efficiently distributed and used. On 4Goods, any
+              non-profit can easily create posts for surplus donations or items
+              that are needed. By sharing surplus donations, non-profits can
+              efficiently share and distribute their resources while limiting or
+              preventing food waste. Donation Hub can also help donors find what
+              to donate and match them with organizations in need. I hope you
+              will enjoy Donation Hub and find it useful. Happy sharing and
+              happy donating!
             </p>
           </div>
         </div>
@@ -47,29 +48,42 @@ const HomePage = () => {
       <section className="explore section">
         <div className="explore__wrapper">
           <div className="explore__wrapper2">
-            <h2 className="explore__title">Explore Organizations</h2>
+            <h2 className="explore__title">
+              <Link to={"/donors"} className="explore__link">
+                Donors
+              </Link>
+            </h2>
             <p className="about__text">
-              Support and donate  local organizations including homeless
+              Support and donate local organizations including homeless
               shelters, first nations etc.., support free/low cost food programs
               in Vancouver, Canada.
             </p>
           </div>
         </div>
-        <div className="explore__image"></div>
+        <Link to={"/donors"} className="explore__link">
+          {" "}
+          <div className="explore__image"></div>
+        </Link>
       </section>
 
       {/* donate section */}
       <section className="donate section">
         <div className="donate__wrapper">
-          <div className="donate__image"></div>
+          <Link className="explore__link" to="/donations">
+            <div className="donate__image"></div>
+          </Link>
           <div className="donate__wrapper2">
-            <h2 className="donate__subtitle">Donate Goods</h2>
+            <h2 className="donate__subtitle">
+              <Link className="explore__link" to="/donations">
+                Goods
+              </Link>
+            </h2>
             <p className="about__text">
               4Goods provides a platform for organizations to show what
               resources they need, as well as surplus donations they have
               received. We envision a society in which every one is committed to
-              giving and participating in accharitable sector, in a long term and
-              a sustainable way. Small Change. BIG Difference.
+              giving and participating in accharitable sector, in a long term
+              and a sustainable way. Small Change. BIG Difference.
             </p>
           </div>
         </div>

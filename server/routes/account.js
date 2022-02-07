@@ -3,6 +3,7 @@ const accountRouter = express.Router();
 
 //get all accounts
 accountRouter.get("/", async (req, res) => {
+  //console.log(Object.keys(req.query).length);
   if (!Object.keys(req.query).length) {
     try {
       const results = await req.dbClient
@@ -25,10 +26,14 @@ accountRouter.get("/", async (req, res) => {
       const filteredResults = await req.dbClient
         .db("charity")
         .collection("accounts")
-        .find({ location: { $regex: query } })
+        .find({ $text: { $search: Object.values(req.query)[0] } })
         .toArray();
+
+      console.log(Object.values(req.query)[0]);
+      console.log(filteredResults);
+
       if (results.length !== 0) {
-        res.status(200).json(results);
+        res.status(200).json(filteredResults);
       } else {
         res.status(404).json({ message: "No results Found" });
       }

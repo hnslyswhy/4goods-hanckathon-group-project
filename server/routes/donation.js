@@ -10,6 +10,7 @@ donationRouter.get("/", async (req, res) => {
       .collection("donation")
       .find({})
       .toArray();
+
     if (results.length !== 0) {
       res.status(200).json(results);
     } else {
@@ -23,18 +24,18 @@ donationRouter.get("/", async (req, res) => {
 
 //get all donation belongs to an account
 donationRouter.get("/account/:accountId", async (req, res) => {
-  console.log('hi')
   try {
     const results = await req.dbClient
       .db("charity")
       .collection("donation")
       .find({ accountId: req.params.accountId })
       .toArray();
-      console.log(results)
+
+    //console.log(results);
     if (results.length !== 0) {
       res.status(200).json(results);
     } else {
-      res.status(404).json({ message: "No Donation Yet" });
+      res.status(204).json({ message: "No Donation Yet" });
     }
   } catch (e) {
     res.status(500).json({ message: "Something went wrong" });
@@ -44,14 +45,14 @@ donationRouter.get("/account/:accountId", async (req, res) => {
 
 //get a donation by Id
 donationRouter.get("/:donationId", async (req, res) => {
-  console.log(req.params.donationId);
+  //console.log(req.params.donationId);
   try {
     const result = await req.dbClient
       .db("charity")
       .collection("donation")
       .findOne({ _id: ObjectId(req.params.donationId) });
 
-    console.log(result);
+    ////console.log(result);
 
     if (result) {
       res.status(200).json(result);
@@ -82,7 +83,7 @@ donationRouter.post("/", async (req, res) => {
             : req.body.image,
       });
 
-    console.log(`A document was inserted with the _id: ${result.insertedId}`);
+    //console.log(`A document was inserted with the _id: ${result.insertedId}`);
 
     const newDonation = await req.dbClient
       .db("charity")
@@ -122,14 +123,14 @@ donationRouter.delete("/:itemId", async (req, res) => {
 
 //get a donation by Id
 donationRouter.get("/:donationId", async (req, res) => {
-  console.log(req.params.donationId);
+  //console.log(req.params.donationId);
   try {
     const result = await req.dbClient
       .db("charity")
       .collection("donation")
       .findOne({ _id: ObjectId(req.params.donationId) });
 
-    console.log(result);
+    ////console.log(result);
 
     if (result) {
       res.status(200).json(result);
@@ -142,24 +143,27 @@ donationRouter.get("/:donationId", async (req, res) => {
   }
 });
 
-//get all donation belongs to an account
+/* //get all donation belongs to an account
 donationRouter.get("/account/:accountId", async (req, res) => {
+  console.log("hi");
+  console.log(req.params.accountId);
   try {
     const results = await req.dbClient
       .db("charity")
       .collection("donation")
       .find({ accountId: req.params.accountId })
       .toArray();
+
     if (results.length !== 0) {
       res.status(200).json(results);
     } else {
-      res.status(404).json({ message: "No Donation Yet" });
+      res.status(204).json({ message: "No Donation Yet" });
     }
   } catch (e) {
     res.status(500).json({ message: "Something went wrong" });
   } finally {
   }
-});
+}); */
 
 //update a donation by id
 donationRouter.patch("/:itemId", async (req, res) => {

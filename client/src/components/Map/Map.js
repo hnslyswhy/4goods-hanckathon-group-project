@@ -8,7 +8,9 @@ import {
 } from "@react-google-maps/api";
 import "./Map.scss";
 
-const MAP_API_KEY = process.env.REACT_APP_MAP_API_KEY;
+//const MAP_API_KEY = process.env.REACT_APP_MAP_API_KEY;
+//console.log(MAP_API_KEY);
+const MAP_API_KEY = "AIzaSyA9GVAkTixX9NIc67f_Bw8PFCzE-QD86kw";
 
 const mapContainerStyle = {
   height: "400px",
@@ -59,9 +61,11 @@ function Map({ allOrganizations }) {
           >
             <div className="info-window">
               <img src={selected.image} style={{ width: "10rem" }} />
-              <Link to={{
-                pathname: `organizations/${selected.accountId}`,
-              }}>
+              <Link
+                to={{
+                  pathname: `organizations/${selected.accountId}`,
+                }}
+              >
                 <p>{selected.program_name}</p>
               </Link>
             </div>
