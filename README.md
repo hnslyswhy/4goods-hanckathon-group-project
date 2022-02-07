@@ -27,11 +27,13 @@ After the hackathon, I added goods pages and managing donation items function to
 [Miriam Nakiyingi](https://github.com/miriamnaki): 
 I worked on front end setup and the profile page that needed to use JWT tokens for authentication, multiple API calls to the back end to display data. I enjoyed working on the team and learned more about mongoDB and jwt tokens.
 
+[Carol Deweger](https://github.com/CDeweger) : 
+I worked on the front-end using React.js, set up the image upload function with Cloudinary, I also did the initial research, collecting data. And I use Sass for stylings. I am passionate about poverty alleviation. I want to use my programming skill to make a positive impact in my community.
+
 [Phoebe Chang](https://github.com/phoebe03111) : 
 I worked on designing, making prototype, mostly focused on front-end side of the project. I also incorporated Google Maps API to display a map on the website.
 
-[Carol Deweger](https://github.com/CDeweger) : 
-I worked on the front-end using React.js, set up the image upload function with Cloudinary, I also did the initial research, collecting data. And I use Sass for stylings. I am passionate about poverty alleviation. I want to use my programming skill to make a positive impact in my community.
+
 
 ## Installation
 
