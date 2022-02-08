@@ -3,18 +3,18 @@
 It is a communication app for non-profits and donors. It is a full-stack project.Therefore, both the node modules in the server folder and client folder need to be installed before running the app. environment variables are not uploaded to github but a sample .env file is present.
 
 ## Tech Stack
-Frontend: React.js, Sass, Helmet, Rest APIs
-Backend: Node.js, Express.js, JTW Token
-Storage: MongoDB, Cloudinary
+1. Frontend: React.js, Sass, Helmet, Rest APIs
+2. Backend: Node.js, Express.js, JTW Token
+3. Storage: MongoDB, Cloudinary
 
 ## Screenshots
 
-![App Screenshot](coming soon)
+![App Screenshot](https://happyaviationenglish.sfo3.digitaloceanspaces.com/4goods.png)
 
 
 ## Demo
 watch the video demo 
-https://www.awesomescreenshot.com/video/7256899?key=9b61ebcd86b295158ca6d262860c2b90
+https://happyaviationenglish.sfo3.digitaloceanspaces.com/4Goods%20-%207%20February%202022.mp4
 
 
 ## Team Members
