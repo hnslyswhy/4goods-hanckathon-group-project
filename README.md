@@ -1,6 +1,7 @@
 # 4Goods
 
-It is a communication app for non-profits and donors. It is a full-stack project.Therefore, both the node modules in the server folder and client folder need to be installed before running the app. environment variables are not uploaded to github but a sample .env file is present.
+It is a communication app for non-profits and donors. It brings different non-profit organizations and donors together. It is a common issue that donations are not efficiently distributed and used. On 4Goods, any non-profit can easily create posts for surplus donations or items that are needed. By sharing surplus donations, non-profits can efficiently share and distribute their resources while limiting or preventing food waste. Donation Hub can also help donors find whatto donate and match them with organizations in need. I hope you will enjoy Donation Hub and find it useful. Happy sharing and happy donating!
+It is a full-stack project.Therefore, both the node modules in the server folder and client folder need to be installed before running the app. environment variables are not uploaded to github but a sample .env file is present.
 
 ## Tech Stack
 1. Frontend: React.js, Sass, Helmet, Rest APIs
